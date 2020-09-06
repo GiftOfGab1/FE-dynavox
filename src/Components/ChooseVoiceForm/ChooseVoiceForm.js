@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
-import './chooseVoice.css';
+import './ChooseVoice.css';
 import Button from '../Button/Button'
-
-
-
 
 function ChooseVoiceForm() {
     //State
+    const [phraseInput, setPhraseInput] = useState('')
+    const [voice, setVoice] = useState('default')
     const [voiceSpeed, setVoiceSpeed] = useState(0)
 
     return (
@@ -21,17 +20,22 @@ function ChooseVoiceForm() {
                     type='text'
                     name='text-input'
                     className='voice-selector-input'
-                    // value={event.target.value}
-                
+                    onChange={(e) => {
+                        setPhraseInput(e.target.value)
+                    }}
+                    value={phraseInput}
                 ></input>
             <label>Choose your voice</label>
             <select
                 className='voice-selector-input'
                 name='voice-selector'
+                onChange={(e) => {
+                    setVoice(e.target.value)
+                }}
             >
                 <option 
                     name='default'
-                    value='none'>Choose a Voice
+                    value='default'>Choose a Voice
                 </option>
                 <option 
                     name='name'
@@ -45,40 +49,30 @@ function ChooseVoiceForm() {
             <section className='voice-setting-container'>
             <section className='voice-speed-container'>
                 <label className='setting-label'>Speed</label>
-                <button
+                <Button
                     name='increase-button'
-                    value='.25'
+                    value='1'
                     label={'+'}
                     onClick={(e) => {
                         e.preventDefault()
-                        console.log(e);
-                        setVoiceSpeed(voiceSpeed + e.target.value)
+                        e.target.name === 'increase-button' && voiceSpeed < 5 && setVoiceSpeed(voiceSpeed + parseInt(e.target.value))
+                        e.target.name === 'decrease-button' && voiceSpeed > -5 && setVoiceSpeed(voiceSpeed - parseInt(e.target.value))
                     }}
-                    >+
-                </button>
+                    voiceSpeed={voiceSpeed}
+                    setVoiceSpeed={setVoiceSpeed}
+                />
                 <h5 className='voice-setting'>{voiceSpeed}</h5>
                 <Button 
-                    value='.25'
+                    value='1'
                     name='decrease-button'
                     label={'-'}
-                />
-            </section>
-            <section className='voice-pitch-container'>
-                <label className='setting-label'>Pitch</label>
-                <Button 
-                    name='increase-button'
-                    value='.25'
-                    label={'+'}
                     onClick={(e) => {
-                        console.log(e);
-                        setVoiceSpeed(voiceSpeed + e.target.value)
+                        e.preventDefault()
+                        e.target.name === 'increase-button' && voiceSpeed < 5 && setVoiceSpeed(voiceSpeed + parseInt(e.target.value))
+                        e.target.name === 'decrease-button' && voiceSpeed > -5 && setVoiceSpeed(voiceSpeed - parseInt(e.target.value))
                     }}
-                />
-                <h5 className='voice-setting'>{voiceSpeed}</h5>
-                <Button 
-                    value='.25'
-                    name='decrease-button'
-                    label={'-'}
+                    voiceSpeed={voiceSpeed}
+                    setVoiceSpeed={setVoiceSpeed}
                 />
             </section>
             </section>
@@ -87,6 +81,16 @@ function ChooseVoiceForm() {
                     value='play'
                     name='play-button'
                     label={'Play'}
+                    onClick={(e) => {
+                        e.preventDefault()
+                        console.log(phraseInput);
+                        console.log(voice);
+                        console.log(voiceSpeed);
+                        setPhraseInput('')
+                        setVoice('default')
+                        setVoiceSpeed(0)
+                    }}
+
                 />
                 <Button 
                     value='save'

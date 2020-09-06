@@ -1,0 +1,6 @@
+.phrase {
+    border-radius: 2px;
+    box-shadow: 1px 1px 5px 0px #9a9a9a, 2px 3px 18px 1px #607d8bbf;
+    height: 8em;
+    width: 8em;
+}

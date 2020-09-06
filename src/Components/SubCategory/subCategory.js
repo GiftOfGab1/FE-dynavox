@@ -1,10 +1,13 @@
 import React from 'react'
+import './SubCategory.css';
 
-function SubCategory() {
 
+function SubCategory(props) {
+    const { categoryName } = props
     return(
-        <section className='sub-category'>
-            <img src='' alt=''/>
+        <section className='sub-category-container'>
+            <img className='sub-category' src='' alt=''/>
+            <p>{ categoryName }</p>
         </section>
     )
 }

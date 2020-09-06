@@ -1,0 +1,7 @@
+.main-page-container {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    margin-top: 3em;
+    width: 100%;
+}

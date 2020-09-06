@@ -3,9 +3,6 @@ import React, { useState } from 'react'
 import './chooseVoice.css';
 import Button from '../Button/Button'
 
-
-
-
 function ChooseVoiceForm() {
     //State
     const [voiceSpeed, setVoiceSpeed] = useState(0)

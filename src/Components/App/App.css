@@ -8,6 +8,10 @@
   align-items: center;
   text-align: center;
   background-color: #1ABC9C;
+  bottom: 0;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 .App-logo {

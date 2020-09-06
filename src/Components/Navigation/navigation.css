@@ -1,0 +1,13 @@
+.navigation {
+    width: 100%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    display:block;
+    width: 100%;
+}

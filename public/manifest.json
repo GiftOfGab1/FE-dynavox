@@ -3,7 +3,7 @@
   "name": "Gift of Gab",
   "icons": [
     {
-      "src": "/images/logo.png",
+      // "src": ,
       "type": "image/png",
       "sizes": "1024x1024"
     }

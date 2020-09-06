@@ -1,6 +1,6 @@
 import React from 'react'
-import Button from '../Button/Button'
-import './Navigation.css';
+import Button from '../Button/button'
+import './navigation.css';
 
 
 function Navigation() {

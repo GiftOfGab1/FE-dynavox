@@ -7,7 +7,6 @@ function Navigation() {
 
     return (
         <nav className='navigation'>
-            <h1 className='header'>Gift of Gab</h1>
             <section className='button-container'>
                 <Button label={'Home'}/>
                 <Button label={'Options'}/>

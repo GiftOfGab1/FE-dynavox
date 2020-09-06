@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
-import './chooseVoice.css';
+import './ChooseVoice.css';
 import Button from '../Button/Button'
 
 function ChooseVoiceForm() {

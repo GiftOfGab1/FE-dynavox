@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
+import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import Button from '../Button/Button'
 
 function ChooseVoiceForm() {
@@ -8,11 +9,24 @@ function ChooseVoiceForm() {
     const [phraseInput, setPhraseInput] = useState('')
     const [voice, setVoice] = useState('default')
     const [voiceSpeed, setVoiceSpeed] = useState(0)
+    const [audioData, setAudioData] = useState({});
+    const [playing, setPlay] = useState(false);
+
+    const togglePlay = async () => {
+      const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
+      const audio = new Audio(data);
+      setAudioData(audio);
+      setPlay({ playing: true });
+      await audio.play();
+      setPlay({playing: false})
+    };
+
 
     return (
         <form 
             className='choose-voice-form'
             onSubmit={() => console.log('hi')}
+            preventDefault
         >
             <h1>Choose Your Voice</h1>
         <label>Sample Phrase</label>
@@ -81,14 +95,9 @@ function ChooseVoiceForm() {
                     value='play'
                     name='play-button'
                     label={'Play'}
-                    onClick={(e) => {
+                    onClick={async(e) => {
                         e.preventDefault()
-                        console.log(phraseInput);
-                        console.log(voice);
-                        console.log(voiceSpeed);
-                        setPhraseInput('')
-                        setVoice('default')
-                        setVoiceSpeed(0)
+                        togglePlay();
                     }}
 
                 />
@@ -96,6 +105,13 @@ function ChooseVoiceForm() {
                     value='save'
                     name='save-button'
                     label={'Save'}
+                    onSubmit={ e => {
+                        e.preventDefault();
+                        setPhraseInput('')
+                        setVoice('default')
+                        setVoiceSpeed(0)
+                      }
+                    }
                 />
             </section>
         </form>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
@@ -105,8 +106,9 @@ function ChooseVoiceForm() {
                         togglePlay();
                     }}
 
-                > Play
+                >
                     </button>
+                <Link to="/main-page" style={{ textDecoration: 'none', }}>
                 <button
                     className="save-and-play-buttons"
                     value='save'
@@ -122,6 +124,11 @@ function ChooseVoiceForm() {
                 >
                      Save
                 </button>
+                </Link>
+
+                 Play
+
+                
             </section>
         </form>
 )

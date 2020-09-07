@@ -1,3 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+
 button {
     cursor: pointer;
+    width: 6em;
+    height: 3em;
+    background-color:  white;
+    border: none;
+    /* box-shadow: -2px 4px #F39C12; */
+    box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C;
+    font-family: 'Comic Neue', cursive;
+    /* font-size: 1em; */
+    /* color: white; */
 }
+

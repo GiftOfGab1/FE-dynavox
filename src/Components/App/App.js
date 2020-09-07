@@ -8,6 +8,7 @@ import PhrasesPage from '../PhrasesPage/PhrasePage.js';
 function App() {
   return (
     <div className="App">
+      <h1 className='header'>Gift of Gab</h1>
       <Navigation/>
       <PhrasesPage />
       {/* <MainPage /> */}

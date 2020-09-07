@@ -1,5 +1,5 @@
 import React from 'react'
-import SubCategory from '../SubCategory/SubCategory'
+import SubCategory from '../SubCategory/subCategory'
 import './MainPage.css';
 
 

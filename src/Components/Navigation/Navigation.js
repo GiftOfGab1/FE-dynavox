@@ -14,7 +14,9 @@ function Navigation() {
                 <Link to="/main-page" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Button label={'Home'}/>
                 </Link>
-                <Button label={'Options'}/>
+                <Link to="/choose-voice" style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Button label={'Options'}/>
+                </Link>                    
                 <Button label={'Help'}/>
                 <Button label={'Bathroom'}/>
             </section>

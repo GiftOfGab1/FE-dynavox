@@ -64,7 +64,8 @@ function ChooseVoiceForm() {
             <section className='voice-setting-container'>
             <section className='voice-speed-container'>
                 <label className='setting-label'>Speed</label>
-                <Button
+                <button
+                    className="faster-button"
                     name='increase-button'
                     value='1'
                     label={'+'}
@@ -75,9 +76,11 @@ function ChooseVoiceForm() {
                     }}
                     voiceSpeed={voiceSpeed}
                     setVoiceSpeed={setVoiceSpeed}
-                />
+                    > +
+                </button>
                 <h5 className='voice-setting'>{voiceSpeed}</h5>
-                <Button 
+                <button
+                    className="slower-button"
                     value='1'
                     name='decrease-button'
                     label={'-'}
@@ -88,11 +91,13 @@ function ChooseVoiceForm() {
                     }}
                     voiceSpeed={voiceSpeed}
                     setVoiceSpeed={setVoiceSpeed}
-                />
+                    > -
+                </button>
             </section>
             </section>
             <section className='play-save-container'>
-                <Button 
+                <button
+                    className="save-and-play-buttons"
                     value='play'
                     name='play-button'
                     label={'Play'}
@@ -116,6 +121,24 @@ function ChooseVoiceForm() {
                     }
                 />
                 </Link>
+
+                > Play
+                    </button>
+                <button
+                    className="save-and-play-buttons"
+                    value='save'
+                    name='save-button'
+                    label={'Save'}
+                    onSubmit={ e => {
+                        e.preventDefault();
+                        setPhraseInput('')
+                        setVoice('default')
+                        setVoiceSpeed(0)
+                      }
+                    }
+                >
+                     Save
+                </button>
             </section>
         </form>
 )

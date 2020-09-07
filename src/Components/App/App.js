@@ -37,6 +37,11 @@ function App() {
           }}
         />
       </Switch>
+      <h1 className='header'>Gift of Gab</h1>
+      <Navigation/>
+      <PhrasesPage />
+      {/* <MainPage /> */}
+      {/* <ChooseVoiceForm /> */}
     </div>
   );
 }

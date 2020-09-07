@@ -11,10 +11,7 @@ function App() {
   return (
     <div className="App">
       <h1 className='header'>Gift of Gab</h1>
-      <Navigation/>
-      {/* <PhrasesPage />
-      <MainPage /> */}
-      <ChooseVoiceForm />
+      <Navigation />
       <Switch>
         <Route
           path='/choose-voice'
@@ -41,7 +38,6 @@ function App() {
           }}
         />
       </Switch>
-      
     </div>
   );
 }

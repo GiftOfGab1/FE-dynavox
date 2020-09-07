@@ -96,6 +96,7 @@ function ChooseVoiceForm() {
             </section>
             </section>
             <section className='play-save-container'>
+                <Link to="/main-page" style={{ textDecoration: 'none', }}>
                 <button
                     className="save-and-play-buttons"
                     value='play'
@@ -105,25 +106,9 @@ function ChooseVoiceForm() {
                         e.preventDefault()
                         togglePlay();
                     }}
-
-                />
-                <Link to="/main-page" style={{ textDecoration: 'none', }}>
-                    <Button 
-                        value='save'
-                        name='save-button'
-                        label={'Save'}
-                        onSubmit={ e => {
-                            e.preventDefault();
-                            setPhraseInput('')
-                            setVoice('default')
-                            setVoiceSpeed(0)
-                        }
-                    }
-                />
+                    >
+                </button>
                 </Link>
-
-                > Play
-                    </button>
                 <button
                     className="save-and-play-buttons"
                     value='save'

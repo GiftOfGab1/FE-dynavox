@@ -7,6 +7,13 @@
     justify-content: space-around;
 }
 
+.button-container button:hover{
+    background-color: #F52110;
+    color: white;
+    box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white;
+
+}
+
 /* .header {
     display:block;
     width: 100%;

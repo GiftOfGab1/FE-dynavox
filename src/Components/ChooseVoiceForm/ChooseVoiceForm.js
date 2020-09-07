@@ -76,7 +76,7 @@ function ChooseVoiceForm() {
                     setVoiceSpeed={setVoiceSpeed}
                 />
                 <h5 className='voice-setting'>{voiceSpeed}</h5>
-                <Button 
+                <Button
                     value='1'
                     name='decrease-button'
                     label={'-'}

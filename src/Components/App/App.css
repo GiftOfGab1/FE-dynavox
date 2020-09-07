@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap');
 
 .App {
   display: flex;
@@ -41,13 +41,14 @@
 }
 
 .header {
-  font-size: 3.6em;
+  font-size: 3.2em;
   color: white;
-  border-radius: 18px;
-  font-family: 'Comic Neue', cursive;
+  /* border-radius: 18px; */
+  font-family: 'Inconsolata', monospace;
   background-color:#D35400;;
   width: 82%;
-  box-shadow: -5px 10px  #39015C;
+  /* box-shadow: -5px 10px  #39015C; */
+  box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C
   
 }
 

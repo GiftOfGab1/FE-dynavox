@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
@@ -101,18 +102,20 @@ function ChooseVoiceForm() {
                     }}
 
                 />
-                <Button 
-                    value='save'
-                    name='save-button'
-                    label={'Save'}
-                    onSubmit={ e => {
-                        e.preventDefault();
-                        setPhraseInput('')
-                        setVoice('default')
-                        setVoiceSpeed(0)
-                      }
+                <Link to="/main-page" style={{ textDecoration: 'none', }}>
+                    <Button 
+                        value='save'
+                        name='save-button'
+                        label={'Save'}
+                        onSubmit={ e => {
+                            e.preventDefault();
+                            setPhraseInput('')
+                            setVoice('default')
+                            setVoiceSpeed(0)
+                        }
                     }
                 />
+                </Link>
             </section>
         </form>
 )

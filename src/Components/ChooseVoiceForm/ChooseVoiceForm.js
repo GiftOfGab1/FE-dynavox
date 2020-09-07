@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
-<<<<<<< HEAD
-import './chooseVoice.css';
-import Button from '../Button/button'
-=======
 import './ChooseVoice.css';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import Button from '../Button/Button'
->>>>>>> 4119bdd443ff2446404aec46b8e29d162672ae4a
 
 function ChooseVoiceForm() {
     //State

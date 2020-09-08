@@ -3,7 +3,7 @@ describe('ChooseVoiceFrom', () => {
         cy.visit('http://localhost:3000/')
     })
 
-    it('should be true', () => {
-        expect(true).to.equal(true)
+    it('should render the form', () => {
+        cy.get('.choose-voice-form')
     })
 })

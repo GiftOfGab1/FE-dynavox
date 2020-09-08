@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SubCategory from '../SubCategory/SubCategory'
+import SubCategory from '../SubCategory/subCategory'
 import './MainPage.css';
 
 

@@ -3,7 +3,9 @@ node_js:
   - "stable"
 cache:
   directories:
-  - node_modules
+  - src/
+before_install:
+  - cd subdirectory
 script:
   - npm test
   - npm run build

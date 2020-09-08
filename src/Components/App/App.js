@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Switch, Route, withRouter, Link } from 'react-router-dom'
+import { Switch, Route, withRouter } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
 import MainPage from '../MainPage/MainPage.js'

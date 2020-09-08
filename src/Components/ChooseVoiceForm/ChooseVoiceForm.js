@@ -3,23 +3,24 @@ import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
-import Button from '../Button/Button'
+// import Button from '../Button/Button'
 
 function ChooseVoiceForm() {
     //State
     const [phraseInput, setPhraseInput] = useState('')
     const [voice, setVoice] = useState('default')
     const [voiceSpeed, setVoiceSpeed] = useState(0)
+    // const [playing, setPlay] = useState(false);
     const [audioData, setAudioData] = useState({});
-    const [playing, setPlay] = useState(false);
 
     const togglePlay = async () => {
       const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
       const audio = new Audio(data);
       setAudioData(audio);
-      setPlay({ playing: true });
+      // setPlay({ playing: true });
       await audio.play();
-      setPlay({playing: false})
+      // setPlay({playing: false})
+      console.log(audioData);
     };
 
 

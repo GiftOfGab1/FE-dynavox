@@ -1,7 +1,7 @@
 import React from 'react'
-import SubCategory from '../SubCategory/subCategory'
 import { Link } from 'react-router-dom'
 import './MainPage.css';
+import SubCategory from '../SubCategory/subCategory'
 
 
 function MainPage() {

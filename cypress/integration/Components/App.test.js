@@ -11,4 +11,8 @@ describe('ChooseVoiceFrom', () => {
   it('should render the header', () => {
     cy.get('.header').contains('Gift of Gab').should('be.visible')
   })
+
+  it('should render the sub-category page', () => {
+    cy.get('.sub-category-container').should('be.visible')
+  })
 })

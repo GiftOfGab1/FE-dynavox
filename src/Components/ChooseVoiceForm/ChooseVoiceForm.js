@@ -11,7 +11,7 @@ function ChooseVoiceForm() {
     const [voice, setVoice] = useState('default')
     const [voiceSpeed, setVoiceSpeed] = useState(0)
     // const [playing, setPlay] = useState(false);
-    // const [audioData, setAudioData] = useState({});
+    const [audioData, setAudioData] = useState({});
 
     const togglePlay = async () => {
       const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
@@ -20,6 +20,7 @@ function ChooseVoiceForm() {
       // setPlay({ playing: true });
       await audio.play();
       // setPlay({playing: false})
+      console.log(audioData);
     };
 
 

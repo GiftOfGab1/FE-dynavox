@@ -5,7 +5,7 @@ cache:
   directories:
   - src/
 before_install:
-  - cd subdirectory
+  - cd src/
 script:
   - npm test
   - npm run build

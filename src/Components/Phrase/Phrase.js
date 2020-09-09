@@ -3,11 +3,11 @@ import './Phrase.css';
 
 
 function Phrase(props) {
-    const { categoryName } = props
+    const { phraseName } = props
     return (
         <section className='phrase-container'>
             <img className='phrase' src='' alt='' />
-            <p>{categoryName}</p>
+            <p>{phraseName}</p>
         </section>
     )
 }

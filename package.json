@@ -12,9 +12,11 @@
     "react-scripts": "3.4.3"
   },
   "scripts": {
+    "cypress:ci": "cypress run --config video=false",
+    "test:ci": "start-server-and-test start http://localhost:3000 cypress:ci",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "$(npm bin)/cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,6 +35,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^5.1.0"
+    "cypress": "^5.1.0",
+    "start-server-and-test": "^1.11.3"
   }
 }

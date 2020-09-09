@@ -10,9 +10,8 @@ import { getUserInfo } from '../../Api/getTextToSpeech'
 function App() {
 
   const getUser = async () => {
-    const user = await getUserInfo()
-    console.log(user);
-    return user
+    const user = await getUserInfo()    
+    return user.data
   }
     
 

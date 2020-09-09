@@ -1,9 +1,10 @@
-describe('ChooseVoiceFrom', () => {
-    beforeEach(() => {
-        cy.visit('http://localhost:3000/')
-    })
+    describe('MainPage', () => {
 
-    it('should be true', () => {
-        expect(true).to.equal(true)
-    })
+        beforeEach(() => {
+            cy.visit('http://localhost:3000/')
+        })
+
+        it('should render the sub-category page', () => {
+            cy.get('.sub-category-container').should('be.visible')
+        })
 })

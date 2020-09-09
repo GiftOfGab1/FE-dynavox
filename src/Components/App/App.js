@@ -1,12 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 import { Switch, Route, withRouter, Link } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
 import MainPage from '../MainPage/MainPage.js'
 import PhrasesPage from '../PhrasesPage/PhrasePage.js'
+import { getUserInfo } from '../../Api/getTextToSpeech'
 
 function App() {
+
+  const getUser = async () => {
+    const user = await getUserInfo()
+    console.log(user);
+    return user
+  }
+    
+
+  useEffect(() => {
+    getUser()
+  }, [])
+
 
   return (
     <div className="App">

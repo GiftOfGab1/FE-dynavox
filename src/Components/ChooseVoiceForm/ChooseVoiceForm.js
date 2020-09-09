@@ -16,11 +16,12 @@ function ChooseVoiceForm() {
     const togglePlay = async () => {
       const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
       const audio = new Audio(data);
+      console.log(audio)
       setAudioData(audio);
       // setPlay({ playing: true });
       await audio.play();
       // setPlay({playing: false})
-      console.log(audioData);
+      console.log(audioData)
     };
 
 
@@ -122,7 +123,7 @@ function ChooseVoiceForm() {
                         }
                         }
                     >
-                     Save
+                      Save
                     </button>
                 </Link>
             </section>

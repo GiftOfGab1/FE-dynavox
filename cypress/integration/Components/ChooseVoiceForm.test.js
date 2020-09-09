@@ -28,5 +28,10 @@ describe('ChooseVoiceFrom', () => {
             cy.get('button').contains('Play').should('be.visible')
             cy.get('button').contains('Save').should('be.visible')
         })
+        cy.visit('http://localhost:3000/')
+    })
+
+    it('should be true', () => {
+        expect(true).to.equal(true)
     })
 })

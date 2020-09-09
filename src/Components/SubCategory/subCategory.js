@@ -1,5 +1,5 @@
 import React from 'react'
-import './SubCategory.css';
+import './subCategory.css';
 
 
 function SubCategory(props) {

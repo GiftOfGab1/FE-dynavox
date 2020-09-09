@@ -1,5 +1,3 @@
-
-
 // const API_KEY = "b2e2b3e1483a4d2494f2b1440b85875c";
 // const VOICE = "Mary";
 // const LANGUAGE = "en-us";
@@ -30,4 +28,19 @@ export const handleTextToSpeech = async (textToSpeech, voice, rate) => {
 	}
 }
 
-
+export const getUserInfo = async () => {
+	try {
+		const response = await fetch('https://gift-of-gab.herokuapp.com/v1/graphql', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'Accept': 'application/json',
+			},
+			body: JSON.stringify({
+				query:"query{ user(id: 1){ firstName lastName email voice speed sections { title icon phrases { expression image } } } }" })
+		})
+		return response.json()
+	} catch (err) {
+		console.log(err);
+	}
+}

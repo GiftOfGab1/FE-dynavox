@@ -21,6 +21,7 @@ function ChooseVoiceForm() {
       // setPlay({ playing: true });
       await audio.play();
       // setPlay({playing: false})
+      console.log(audioData)
     };
 
 

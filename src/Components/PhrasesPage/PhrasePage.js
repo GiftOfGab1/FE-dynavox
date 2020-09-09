@@ -6,13 +6,11 @@ import './PhrasePage.css';
 function PhrasePage() {
     return (
         <section className='phrase-page-container'>
-            <Phrase phraseName={'Hi'} />
-            <Phrase phraseName={'Yo'} />
-            <Phrase phraseName={'Sup'} />
-            <Phrase phraseName={'Hey'} />
-            <Phrase phraseName={'Howdy'} />
-            <Phrase phraseName={"What's poppin"} />
-            <Phrase phraseName={"What's good?"} />
+            <Phrase className='phrase' phraseName={'Hi'} />
+            <Phrase className='phrase' phraseName={'Yo'} />
+            <Phrase className='phrase' phraseName={'Sup'} />
+            <Phrase className='phrase' phraseName={'Hey'} />
+            
         </section>
     )
 }

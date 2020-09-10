@@ -27,6 +27,14 @@ export const addPhrases = phrase => ({
     type: 'ADD_PHRASE',
     phrase
 });
+export const startPlay = isPlaying => ({
+  type: 'START_PLAY', 
+  isPlaying
+})
+export const stopPlay = isPlaying => ({
+  type: 'STOP_PLAY', 
+  isPlaying
+})
 
 export const setUser = userDetails => ({
   type: 'SET_USER',

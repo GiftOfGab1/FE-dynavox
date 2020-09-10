@@ -1,11 +1,40 @@
+//dependencies
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
 import App from './Components/App/App'
+import { Provider } from 'react-redux'
+import { createStore, combineReducers } from 'redux'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter } from 'react-router-dom';
+import { composeWithDevTools } from 'redux-devtools-extension'
 
-const router = <BrowserRouter><App /></BrowserRouter>
+
+// App imports
+import './index.css'
+import AppState from './Store/Reducers/index'
+// import rootReducer  from './Store/Reducers/index'
+const appReducer = combineReducers({
+  AppState,
+  // ...userReducer,
+})
+
+export const rootReducer = (state, action) => {
+  return appReducer(state, action)
+}
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools()
+  // other store enhancers if any
+);
+
+const router = (
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
+)
 
 
 ReactDOM.render(

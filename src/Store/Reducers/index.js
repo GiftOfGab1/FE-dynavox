@@ -1,8 +1,15 @@
-import { combineReducers } from 'redux'
+
 // We will need to import reducers as we add them
-import * as actions from "../Actions/index"
-const rootReducer = combineReducers((state, action) => {
-  switch (actions.type) {
+// import * as actions from "../Actions/index"
+
+export const userInitialState = {
+  error: null,
+  isPlaying: false,
+  userDetails: null
+}
+
+export default (state = userInitialState, action) => {
+  switch (action.type) {
     case 'GET_SOCIAL_SETTING' : {
       return {}
     }
@@ -22,15 +29,22 @@ const rootReducer = combineReducers((state, action) => {
       return {}
     }
     case 'SET_USER' : {
-      return { userDetails: state.userDetails }
+      return { 
+        ...state,
+        userDetails: action.userDetails
+      }
     }
-    case 'UPDATE_USER' : {
-      return { userDetails: state.userDetails }
-    }
+    // case 'UPDATE_USER' : {
+    //   return { 
+    //     ...state,
+    //     userDetails: state.userDetails
+    //   }
+    // }
     default: {
-      throw new Error(`Unhandled type: ${action.type}`)
+      return state
+      // throw new Error(`Unhandled type: ${action.type}`)
     }
   }
-})
+}
 
-export default rootReducer
+// export default rootReducer

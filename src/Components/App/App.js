@@ -6,17 +6,23 @@ import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
 import MainPage from '../MainPage/MainPage.js'
 import PhrasesPage from '../PhrasesPage/PhrasePage.js'
 import { getUserInfo } from '../../Api/getTextToSpeech'
+import setUserDetails from '../../Store/Reducers/index'
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from '../../Store/Actions/index'
+
 
 function App() {
 
+  const dispatch = useDispatch();
+
   const getUser = async () => {
     const user = await getUserInfo()    
-    return user.data
+    return dispatch(setUser(user.data.user, setUserDetails))
   }
-    
 
   useEffect(() => {
     getUser()
+    
   }, [])
 
 

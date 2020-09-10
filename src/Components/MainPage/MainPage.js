@@ -3,14 +3,24 @@ import { Link } from 'react-router-dom'
 import './MainPage.css';
 import SubCategory from '../SubCategory/subCategory'
 
+import bankImage from '../../Assets/SocialSettings/bank.png'
+import partyImage from '../../Assets/SocialSettings/party.png'
 
 function MainPage() {
 return (
     <section className='main-page-container'>
+      <div className='glass'>
         <Link to="/phrases-page" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <SubCategory categoryName={'Bank'}/>
+            <SubCategory 
+              categoryName={'Bank'}
+              img={bankImage}
+            />
         </Link>
-        <SubCategory categoryName={'Grocery Store'}/>
+        <SubCategory 
+          categoryName={'Party'}
+          img={partyImage}
+        />
+      </div>
     </section>
 )
 }

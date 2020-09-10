@@ -1,6 +1,6 @@
-const API_KEY = "b2e2b3e1483a4d2494f2b1440b85875c";
+// const API_KEY = "b2e2b3e1483a4d2494f2b1440b85875c";
 // const VOICE = "Mary";
-const LANGUAGE = "en-us";
+// const LANGUAGE = "en-us";
 // const RATE = "0";
 
 

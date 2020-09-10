@@ -41,7 +41,7 @@ export const setUser = userDetails => ({
   userDetails
 })
 
-export const updateUser = userDetails => ({
+export const updateUser = (userDetails) => ({
   type: 'UPDATE_USER',
   userDetails
 })

@@ -34,6 +34,18 @@ export default (state = userInitialState, action) => {
         userDetails: action.userDetails
       }
     }
+    case 'START_PLAY' : {
+      return { 
+        ...state,
+        isPlaying: state.isPlaying = true
+      }
+    }
+    case 'STOP_PLAY' : {
+      return { 
+        ...state,
+        isPlaying: state.isPlaying = false
+      }
+    }
     // case 'UPDATE_USER' : {
     //   return { 
     //     ...state,

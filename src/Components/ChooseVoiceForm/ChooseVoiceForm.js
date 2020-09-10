@@ -3,25 +3,33 @@ import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
+import { useDispatch, useSelector } from "react-redux";
+import { startPlay, stopPlay } from '../../Store/Actions';
 // import Button from '../Button/Button'
 
-function ChooseVoiceForm() {
+function ChooseVoiceForm(props) {
     //State
+    const isPlaying = useSelector((state) => state.isPlaying)
+    const dispatch = useDispatch();
+
     const [phraseInput, setPhraseInput] = useState('')
     const [voice, setVoice] = useState('default')
     const [voiceSpeed, setVoiceSpeed] = useState(0)
     // const [playing, setPlay] = useState(false);
-    const [audioData, setAudioData] = useState({});
+    // const [audioData, setAudioData] = useState({});
 
-    const togglePlay = async () => {
+    const togglePlay = async (props) => {
       const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
       const audio = new Audio(data);
-      console.log(audio)
-      setAudioData(audio);
-      // setPlay({ playing: true });
-      await audio.play();
-      // setPlay({playing: false})
-      console.log(audioData)
+      // setAudioData(audio);
+      if(isPlaying) {
+        audio.pause();
+        audio.currentTime = 0;
+        return dispatch(stopPlay(), isPlaying)
+      } else {
+        audio.play();
+        return dispatch(startPlay(), isPlaying)
+      }
     };
 
 

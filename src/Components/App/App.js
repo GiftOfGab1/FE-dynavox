@@ -11,10 +11,13 @@ import { useDispatch } from "react-redux";
 import { setUser } from '../../Store/Actions/index'
 
 
+
 function App() {
 
   const dispatch = useDispatch();
+  // const useMountEffect = (fun) => useEffect(fun, [])
 
+  
   const getUser = async () => {
     const user = await getUserInfo()    
     return dispatch(setUser(user.data.user, setUserDetails))
@@ -23,7 +26,7 @@ function App() {
   useEffect(() => {
     getUser()
     
-  }, [getUser])
+  })
 
 
   return (

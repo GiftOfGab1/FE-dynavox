@@ -44,7 +44,7 @@ function ChooseVoiceForm(props) {
                 <input
                     type='text'
                     name='text-input'
-                    className='voice-selector-input'
+                    className='voice-selector-input text-input'
                     onChange={(e) => {
                         setPhraseInput(e.target.value)
                     }}
@@ -52,7 +52,7 @@ function ChooseVoiceForm(props) {
                 ></input>
             <label>Choose your voice</label>
             <select
-                className='voice-selector-input'
+                className='voice-selector-input dropdown-input'
                 name='voice-selector'
                 onChange={(e) => {
                     setVoice(e.target.value)

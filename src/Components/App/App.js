@@ -15,7 +15,7 @@ import { setUser } from '../../Store/Actions/index'
 function App() {
 
   const dispatch = useDispatch();
-  // const useMountEffect = (fun) => useEffect(fun, [])
+  const useMountEffect = (fun) => useEffect(fun, [])
 
   
   const getUser = async () => {

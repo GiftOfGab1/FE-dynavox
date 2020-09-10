@@ -34,6 +34,12 @@ export default (state = userInitialState, action) => {
         userDetails: action.userDetails
       }
     }
+    case 'UPDATE_USER' : {
+      return { 
+        ...state,
+        userDetails: state.userDetails
+      }
+    }
     case 'START_PLAY' : {
       return { 
         ...state,
@@ -46,12 +52,6 @@ export default (state = userInitialState, action) => {
         isPlaying: state.isPlaying = false
       }
     }
-    // case 'UPDATE_USER' : {
-    //   return { 
-    //     ...state,
-    //     userDetails: state.userDetails
-    //   }
-    // }
     default: {
       return state
       // throw new Error(`Unhandled type: ${action.type}`)

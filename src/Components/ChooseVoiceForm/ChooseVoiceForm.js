@@ -28,7 +28,7 @@ function ChooseVoiceForm(props) {
         return dispatch(stopPlay(), isPlaying)
       } else {
         audio.play();
-        return dispatch(startPlay(), isPlaying)
+        return dispatch(startPlay(), isPlaying) && dispatch(stopPlay(), isPlaying)
       }
     };
 

@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
-import { handleTextToSpeech } from '../../Api/getTextToSpeech'
+import { handleTextToSpeech, updateUser as updateUserPost } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
-import { startPlay, stopPlay } from '../../Store/Actions';
+import { startPlay, stopPlay, setUser } from '../../Store/Actions';
+import setUserDetails from '../../Store/Reducers/index'
 // import Button from '../Button/Button'
 
-function ChooseVoiceForm(props) {
+function ChooseVoiceForm() {
     //State
+
+    
     const isPlaying = useSelector((state) => state.isPlaying)
     const dispatch = useDispatch();
 
@@ -18,7 +21,7 @@ function ChooseVoiceForm(props) {
     // const [playing, setPlay] = useState(false);
     // const [audioData, setAudioData] = useState({});
 
-    const togglePlay = async (props) => {
+    const togglePlay = async () => {
       const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
       const audio = new Audio(data);
       // setAudioData(audio);
@@ -32,12 +35,28 @@ function ChooseVoiceForm(props) {
       }
     };
 
+    const updateUserSettings = async () => {
+      // const user = useSelector((state) => state.userDetails)
+      // console.log(user)
+      const userResponse = await updateUserPost(voice, voiceSpeed)
+      // const voiceUpdate = userResponse.data.updateUser.user.voice
+      // const speedUpdate = userResponse.data.updateUser.user.speed
+      // console.log(user)
+      // user.voice = voiceUpdate 
+      // user.speed = speedUpdate
+      // event.preventDefault()
+      // return dispatch(setUser(user, setUserDetails))
+      return dispatch(setUser(userResponse.data.updateUser.user, setUserDetails))
+    }
+
 
     return (
         <form 
             className='choose-voice-form'
-            onSubmit={() => console.log('hi')}
-            preventDefault
+            onSubmit={(e) => {
+              e.preventDefault()
+              e.stopPropagation()
+            }}
         >
             <h1>Choose Your Voice</h1>
         <label>Sample Phrase</label>
@@ -64,11 +83,11 @@ function ChooseVoiceForm(props) {
                 </option>
                 <option 
                     name='name'
-                    value='Amy'>Amy
+                    value="Amy">Amy
                 </option>
                 <option 
                     name='name'
-                    value='Mary'>Mary
+                    value="Mary">Mary
                 </option>
             </select>
             <section className='voice-setting-container'>
@@ -123,11 +142,13 @@ function ChooseVoiceForm(props) {
                         value='save'
                         name='save-button'
                         label={'Save'}
-                        onSubmit={ e => {
+                        onClick={ e => {
                             e.preventDefault();
+                            e.stopPropagation();
                             setPhraseInput('')
                             setVoice('default')
                             setVoiceSpeed(0)
+                            updateUserSettings()
                         }
                         }
                     >

@@ -26,7 +26,7 @@ describe('ChooseVoiceFrom', () => {
     })
     cy.get('.choose-voice-form').within(() => {
       cy.get('.text-input').type('Howdy')
-      cy.get('.dropdown-input')
+      cy.get('.dropdown-input').select('Amy')
     })
 
   })

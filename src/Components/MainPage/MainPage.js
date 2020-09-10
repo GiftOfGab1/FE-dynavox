@@ -10,7 +10,7 @@ return (
         <Link to="/phrases-page" style={{ textDecoration: 'none', color: 'inherit' }}>
             <SubCategory categoryName={'Bank'}/>
         </Link>
-        <SubCategory categoryName={'Grocery Store'}/>
+            <SubCategory categoryName={'Grocery Store'}/>
     </section>
 )
 }

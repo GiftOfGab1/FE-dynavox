@@ -28,6 +28,35 @@ export const handleTextToSpeech = async (textToSpeech, voice, rate) => {
 	}
 }
 
+export const updateUser = async (voice, speed) => {
+  try {
+    const response = await fetch('https://gift-of-gab.herokuapp.com/v1/graphql', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json',
+				'Accept': 'application/json',
+			},
+			body: JSON.stringify({
+        mutation:`
+        mutation {
+          updateUser(input: {
+            id: 1 
+            voice: ${voice}
+            speed: ${speed}
+          }){ 
+            user {
+              id, 
+              voice, 
+              speed
+            }}}` 
+      })
+		})
+
+  } catch (err) {
+    console.log(error)
+  }
+}
+
 export const getUserInfo = async () => {
 	try {
 		const response = await fetch('https://gift-of-gab.herokuapp.com/v1/graphql', {
@@ -37,7 +66,22 @@ export const getUserInfo = async () => {
 				'Accept': 'application/json',
 			},
 			body: JSON.stringify({
-				query:"query{ user(id: 1){ firstName lastName email voice speed sections { title icon phrases { expression image } } } }" })
+        query:`
+        query{ 
+          user(id: 1){ 
+            firstName 
+            lastName 
+            email 
+            voice 
+            speed 
+            sections { 
+              title 
+              icon 
+              phrases { 
+                expression 
+                image 
+              } } } }` 
+      })
 		})
 		return response.json()
 	} catch (err) {

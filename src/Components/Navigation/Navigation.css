@@ -5,6 +5,7 @@
 .button-container {
     display: flex;
     justify-content: space-around;
+    font-size: 1.3em;
 }
 
 .button-container button{
@@ -27,3 +28,15 @@
     display:block;
     width: 100%;
 } */
+
+@media all and (max-width: 550px) and (min-width: 402px) {
+  .button-container {
+    font-size: 1em;
+  }
+}
+
+@media all and (max-width: 402px) and (min-width: 250px) {
+  .button-container {
+    font-size: 0.85em;
+  }
+}

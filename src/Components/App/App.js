@@ -51,7 +51,9 @@ function App () {
           path='/'
           render={() => {
             return (
-              <MainPage />
+              <MainPage 
+                socialSettings={User && User.sections}
+              />
             )
           }}
         />

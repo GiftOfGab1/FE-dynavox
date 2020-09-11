@@ -4,7 +4,7 @@
 button {
     cursor: pointer;
     width: 6em;
-    height: 3em;
+    min-height: 3em;
     /* background-color:  white; */
     border: none;
     /* box-shadow: -2px 4px #F39C12; */

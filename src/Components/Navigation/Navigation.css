@@ -1,7 +1,26 @@
+.Home:after {
+  content: "🏠";
+  font-size: 3em;
+}
+
+.Settings:after {
+  content: "⚙️";
+  font-size: 3em;
+}
+.Help:after {
+  content: "🆘";
+  font-size: 3em;
+}
+.Bathroom:after {
+  content: "🚽";
+  font-size: 3em;
+}
 .navigation {
     width: 100%;
 }
-
+p {
+  font-size: .7em;
+}
 .button-container {
     display: flex;
     justify-content: space-around;
@@ -28,6 +47,7 @@
     display:block;
     width: 100%;
 } */
+
 
 @media all and (max-width: 550px) and (min-width: 402px) {
   .button-container {

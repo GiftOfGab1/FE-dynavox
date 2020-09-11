@@ -58,7 +58,7 @@
   background-clip: content-box, border-box;
   /* box-shadow: -5px 10px  #39015C; */
   /* box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C */
-  
+  text-shadow: 1px 2px 2px black;
 }
 
 @keyframes App-logo-spin {

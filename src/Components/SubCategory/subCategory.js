@@ -1,7 +1,7 @@
 import React from 'react'
 import './subCategory.css';
 import BankImage from '../../Assets/SocialSettings/Bank.png'
-import PartyImage from '../../Assets/SocialSettings/Party.png'
+// import PartyImage from '../../Assets/SocialSettings/Party.png'
 
 
 

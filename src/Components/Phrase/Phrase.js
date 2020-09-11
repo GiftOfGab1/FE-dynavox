@@ -7,8 +7,8 @@ import { startPlay, stopPlay } from '../../Store/Actions';
 
 
 function Phrase(props) {
-  
-  const { phraseInput, voice, voiceSpeed } = props
+
+  // const { phraseInput, voice, voiceSpeed } = props
 
   const dispatch = useDispatch();
   const isPlaying = useSelector((state) => state.isPlaying)

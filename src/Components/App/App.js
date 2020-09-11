@@ -7,27 +7,14 @@ import MainPage from '../MainPage/MainPage.js'
 import PhrasesPage from '../PhrasesPage/PhrasePage.js'
 import { getUserInfo } from '../../Api/getTextToSpeech'
 import setUserDetails from '../../Store/Reducers/index'
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setUser } from '../../Store/Actions/index'
+import useApp from '../../customHooks/useApp'
 
 
 
 function App() {
-
-  const dispatch = useDispatch();
-  // const useMountEffect = (fun) => useEffect(fun, [])
-
-  
-  const getUser = async () => {
-    const user = await getUserInfo()    
-    return dispatch(setUser(user.data.user, setUserDetails))
-  }
-
-  useEffect(() => {
-    getUser()
-    
-  })
-
+  useApp()
 
   return (
     <div className="App">

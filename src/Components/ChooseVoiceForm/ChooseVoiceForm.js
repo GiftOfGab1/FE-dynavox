@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
-import './ChooseVoice.css';
 import { handleTextToSpeech, updateUser as updateUserPost } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay, setUser } from '../../Store/Actions';
 import setUserDetails from '../../Store/Reducers/index'
 // import Button from '../Button/Button'
+import './ChooseVoice.css';
 
 function ChooseVoiceForm() {
     //State

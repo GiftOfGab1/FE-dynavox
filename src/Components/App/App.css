@@ -43,12 +43,21 @@
 .header {
   font-size: 3.2em;
   color: white;
-  /* border-radius: 18px; */
+  border-radius: 18px;
   font-family: 'Inconsolata', monospace;
-  background-color:#D35400;;
+  background:#D35400;
+  outline: none;
+  border: solid 3px transparent;
   width: 82%;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  ),linear-gradient(101deg, #292929, #000000c2);
+  box-shadow: 4px 7px 13px 0px #040404c2, inset 3px 3px 6px 0px #fb760a, inset -4px -4px 4px 0px #94400b, 2px 1000px 1px #D35400 inset;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   /* box-shadow: -5px 10px  #39015C; */
-  box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C
+  /* box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C */
   
 }
 

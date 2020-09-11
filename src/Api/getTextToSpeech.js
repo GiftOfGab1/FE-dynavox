@@ -56,7 +56,9 @@ export const updateUser = async (voice, speed) => {
               icon 
               phrases { 
                 expression 
-                image } } 
+                image 
+                tags
+              } } 
               } } }`
       })
     })
@@ -88,7 +90,8 @@ export const getUserInfo = async () => {
               icon 
               phrases { 
                 expression 
-                image 
+                image
+                tags 
               } } } }` 
       })
 		})

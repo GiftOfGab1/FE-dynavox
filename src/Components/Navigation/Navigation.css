@@ -7,12 +7,21 @@
     justify-content: space-around;
 }
 
-.button-container button:hover{
+.button-container button{
+    background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),linear-gradient(101deg, #f52211, #f49c11);
+    /* color: white; */
+    /* box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white; */
+
+} 
+/* .button-container button:hover{
     background-color: #F52110;
     color: white;
     box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white;
 
-}
+} */
 
 /* .header {
     display:block;

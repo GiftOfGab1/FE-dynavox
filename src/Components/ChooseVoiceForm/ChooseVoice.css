@@ -26,6 +26,13 @@
     padding: .25em;
     height: 2em;
     width: 20em;
+    background: #282e33;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  min-height: 30px;
+  box-shadow: inset 4px 7px 13px 0px #00000061, inset -2px -2px 4px 0px #8f8f8f1c;
+  border-bottom: 1px solid white;
 }
 
 .voice-setting-container {
@@ -56,39 +63,43 @@
 }
 
 .save-and-play-buttons {
-    background-color: white;
-    box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C;
-    border-radius: 15px;
+  border: 3px solid #F52110;
+    /* background-color: white; */
+    /* box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C;
+    border-radius: 15px; */
+    margin: 5px;
 }
 
 .save-and-play-buttons:hover{
-    background-color: #F52110;
-    box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white
+    /* background-color: #F52110; */
+    /* box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white */
 }
 
 .faster-button {
-    box-shadow: none;
-    border-top: 6px solid #F52110;
+    /* box-shadow: none; */
+    border: 3px solid #F52110;
+    /* border-top: 3px solid #F39C12; */
 }
 
 .faster-button:hover{
-    box-shadow: none;
-    border-top: 6px solid #F52110;
-    background-color: black;
-    color: white;
+  border-top: 3px solid #F52110;
+  background-color: black;
+  box-shadow: 1px, 1px, 200px, #F39C12 ;
+    /* color: white; */
 }
 
 
 .slower-button {
-    box-shadow: none;
-    border-bottom: 6px solid #F52110;
+  border: 3px solid #F52110;
+    /* box-shadow: none; */
+    /* border-bottom: 3px solid #F39C12; */
 }
 
 .slower-button:hover{
-    box-shadow: none;
+    /* box-shadow: none;
     border-bottom: 6px solid #F52110;
     background-color: black;
-    color: white;
+    color: white; */
 }
 
 

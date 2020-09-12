@@ -1,29 +1,16 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './App.css'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
 import MainPage from '../MainPage/MainPage.js'
 import PhrasesPage from '../PhrasesPage/PhrasePage.js'
-import { getUserInfo } from '../../Api/getTextToSpeech'
-import setUserDetails from '../../Store/Reducers/index'
-import { useDispatch, useSelector } from "react-redux";
-import { setUser } from '../../Store/Actions/index'
+import useApp from './useApp'
 
 
-function App () {
-  const User = useSelector((state) => state.AppState.userDetails)
-  console.log(User)
-  const dispatch = useDispatch();
+function App() {
+  useApp()
 
-  
-  const getUser = async () => {
-    const user = await getUserInfo()    
-    return dispatch(setUser(user.data.user, setUserDetails))
-  }
-  useEffect(() => {
-    if(!User) getUser()
-  })
 
 
   return (

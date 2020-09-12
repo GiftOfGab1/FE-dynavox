@@ -7,10 +7,11 @@ function Button(props) {
     const { value, name, onClick } = props
     return (
         <div>
-            <button 
+            <button  className={props.label}
                 name={name}
                 value={value}
-                onClick={onClick}>{props.label}
+                onClick={onClick}>
+                {/* {props.label} */}
             </button>
         </div>
     )

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Phrase.css';
+import { Emoji } from '../Emoji/Emoji'
 
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
@@ -32,7 +33,9 @@ function Phrase(props) {
         <section className='phrase-container'
           onclick={togglePlay}
         >
-            <img className='phrase' src='' alt='' />
+            <Emoji 
+              label={props.phraseName}
+            />
             <p>{phraseName}</p>
         </section>
     )

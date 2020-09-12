@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { getUserInfo } from '../Api/getTextToSpeech'
+import { getUserInfo } from '../Api/getUser'
 import { setUser } from '../Store/Actions/index'
 import setUserDetails from '../Store/Reducers/index'
 

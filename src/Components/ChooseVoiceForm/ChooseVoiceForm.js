@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
-import { handleTextToSpeech, updateUser as updateUserPost } from '../../Api/getTextToSpeech'
+import { handleTextToSpeech } from '../../Api/getTextToSpeech'
+import { updateUser as updateUserPost } from '../../Api/updateUser'
 import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay, setUser } from '../../Store/Actions';
 import setUserDetails from '../../Store/Reducers/index'

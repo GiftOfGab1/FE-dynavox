@@ -5,7 +5,7 @@ import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
 import MainPage from '../MainPage/MainPage.js'
 import PhrasesPage from '../PhrasesPage/PhrasePage.js'
-import useApp from '../../customHooks/useApp'
+import useApp from './useApp'
 
 
 function App() {

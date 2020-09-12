@@ -22,7 +22,7 @@ export const rootReducer = (state, action) => {
   return appReducer(state, action)
 }
 
-const store = createStore(
+export const store = createStore(
   rootReducer,
   composeWithDevTools()
   // other store enhancers if any

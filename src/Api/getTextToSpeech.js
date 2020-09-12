@@ -28,6 +28,3 @@ export const handleTextToSpeech = async (textToSpeech, voice, rate) => {
 		return error;
 	}
 }
-
-
-

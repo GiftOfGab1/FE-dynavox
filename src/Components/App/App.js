@@ -11,6 +11,8 @@ import useApp from './useApp'
 function App() {
   useApp()
 
+
+
   return (
     <div className="App">
       <h1 className='header'>Gift of Gab</h1>
@@ -36,7 +38,9 @@ function App() {
           path='/'
           render={() => {
             return (
-              <MainPage />
+              <MainPage 
+                socialSettings={User && User.sections}
+              />
             )
           }}
         />

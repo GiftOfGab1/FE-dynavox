@@ -4,10 +4,12 @@ import { Link } from 'react-router-dom'
 import './ChooseVoice.css';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { updateUser as updateUserPost } from '../../Api/updateUser'
+
 import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay, setUser } from '../../Store/Actions';
 import setUserDetails from '../../Store/Reducers/index'
 // import Button from '../Button/Button'
+import './ChooseVoice.css';
 
 function ChooseVoiceForm() {
     //State

@@ -5,6 +5,9 @@ import useMainPage from './useMainPage'
 import { connect } from "react-redux"
 import { store } from '../../index'
 
+// import BankImage from '../../Assets/SocialSettings/Bank.png'
+// import PartyImage from '../../Assets/SocialSettings/Party.png'
+// import { useSelector } from "react-redux";
 
 // import store from '../..//Store/Reducers';
 

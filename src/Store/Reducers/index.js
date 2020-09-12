@@ -2,16 +2,22 @@
 // We will need to import reducers as we add them
 // import * as actions from "../Actions/index"
 
+// import { setSocialSettings } from "../Actions"
+
 export const userInitialState = {
   error: null,
   isPlaying: false,
-  userDetails: null
+  userDetails: null,
+  socialSettings: null
 }
 
 export default (state = userInitialState, action) => {
   switch (action.type) {
-    case 'GET_SOCIAL_SETTING' : {
-      return {}
+    case 'SET_SOCIAL_SETTINGS' : {
+      return {
+        ...state,
+        socialSettings: action.socialSettings
+      }
     }
     case 'ADD_SOCIAL_SETTING' : {
       return {}

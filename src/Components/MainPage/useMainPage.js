@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
 import SubCategory from '../SubCategory/subCategory'
 import { Link } from 'react-router-dom'
-import { useDispatch, connect } from "react-redux"
+import { useDispatch } from "react-redux"
 import { getSocialSettings } from '../../Api/getSocialSettings'
 import { setSocialSettings } from '../../Store/Actions/index'
 import  setAllSocialSettings  from '../../Store/Reducers/index'
-import { store } from '../../index'
 
 
 function useMainPage(socialSettings) {

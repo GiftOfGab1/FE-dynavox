@@ -1,6 +1,5 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-import SubCategory from '../SubCategory/subCategory'
 import './MainPage.css';
 import useMainPage from './useMainPage'
 import { connect } from "react-redux"

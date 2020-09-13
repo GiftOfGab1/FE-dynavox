@@ -8,7 +8,7 @@ import { startPlay, stopPlay } from '../../Store/Actions';
 
 
 function Phrase(props) {
-
+  const User = useSelector(state => state.AppState.userDetails)
   // const { phraseInput, voice, voiceSpeed } = props
 
   const dispatch = useDispatch();
@@ -28,10 +28,10 @@ function Phrase(props) {
     }
   };
 
-    const { phraseName } = props
+    const { phraseName  } = props
     return (
         <section className='phrase-container'
-          onclick={togglePlay}
+          onclick={togglePlay(props.phraseName, User.voice, User.speed)}
         >
             <Emoji 
               label={props.phraseName}

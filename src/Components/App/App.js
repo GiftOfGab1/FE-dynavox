@@ -39,7 +39,6 @@ function App() {
           render={() => {
             return (
               <MainPage 
-                socialSettings={User && User.sections}
               />
             )
           }}
@@ -48,5 +47,6 @@ function App() {
     </div>
   );
 }
+
 
 export default withRouter(App);

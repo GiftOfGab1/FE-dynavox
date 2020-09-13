@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import "../Emoji/Emoji.css"
 export const Emoji = props => (
 
@@ -13,4 +15,10 @@ export const Emoji = props => (
     </span>
   </section>
 );
+
+Emoji.propTypes = {
+  img: PropTypes.string,
+  label: PropTypes.string,
+ }
+
 export default Emoji;

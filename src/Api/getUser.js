@@ -21,6 +21,7 @@ export const getUserInfo = async () => {
               phrases { 
                 expression 
                 image 
+                tags
               } } } }`
             })
         })

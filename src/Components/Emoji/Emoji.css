@@ -66,6 +66,7 @@
 .card:after {
   content: "💳"
 }
+
 .thanks:after {
   content: "🙏"
 }

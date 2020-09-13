@@ -36,7 +36,7 @@ function Phrase(props) {
   // };
 
     const { phraseName  } = props
-    console.log(props.phraseName)
+
     return (
         <section className='phrase-container'
         >

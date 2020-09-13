@@ -61,7 +61,6 @@ export const Emoji = props => {
   )
 };
 
-);
 
 Emoji.propTypes = {
   img: PropTypes.string,

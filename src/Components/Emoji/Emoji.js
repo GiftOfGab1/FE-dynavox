@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import "../Emoji/Emoji.css"
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
@@ -58,4 +60,12 @@ export const Emoji = props => {
   </section>
   )
 };
+
+);
+
+Emoji.propTypes = {
+  img: PropTypes.string,
+  label: PropTypes.string,
+ }
+
 export default Emoji;

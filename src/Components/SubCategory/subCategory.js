@@ -1,5 +1,7 @@
 import React from 'react'
 import './subCategory.css';
+import PropTypes from 'prop-types';
+
 // import BankImage from '../../Assets/SocialSettings/Bank.png'
 // import PartyImage from '../../Assets/SocialSettings/Party.png'
 import { Emoji } from '../Emoji/Emoji'
@@ -16,6 +18,10 @@ function SubCategory(props) {
         </section>
 
     )
+}
+
+SubCategory.propTypes = {
+    categoryName: PropTypes.string.isRequired
 }
 
 export default SubCategory

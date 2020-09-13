@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './Phrase.css';
 import { Emoji } from '../Emoji/Emoji'
+import PropTypes from 'prop-types';
+
 
 // import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
@@ -49,6 +51,10 @@ function Phrase(props) {
             <p>{phraseName}</p>
         </section>
     )
+}
+
+Phrase.propTypes = {
+  phraseName: PropTypes.string.isRequired
 }
 
 export default Phrase

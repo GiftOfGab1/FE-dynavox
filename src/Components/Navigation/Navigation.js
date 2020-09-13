@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../Button/Button'
 import './Navigation.css';
-
+// import Phrase from '../Phrase/Phrase'
 
 
 function Navigation() {
@@ -23,7 +23,7 @@ function Navigation() {
                   <Button label={'Help'}/>
                   <p>Help</p>
                 </Link>
-                <Link  style={{ textDecoration: 'none', color: 'inherit' }}>                  
+                <Link  style={{ textDecoration: 'none', color: 'inherit' }}>              
                   <Button label={'Bathroom'}/><p>Bathroom</p>
                 </Link>
             </section>

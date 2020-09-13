@@ -25,8 +25,7 @@ function ChooseVoiceForm() {
     // const [audioData, setAudioData] = useState({});
 
     const togglePlay = async () => {
-      const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
-      const audio = new Audio(data);
+      const audio = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
       // setAudioData(audio);
       if(isPlaying) {
         audio.pause();

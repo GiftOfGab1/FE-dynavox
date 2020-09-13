@@ -12,6 +12,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 // App imports
 import './index.css'
 import AppState from './Store/Reducers/index'
+
 // import rootReducer  from './Store/Reducers/index'
 const appReducer = combineReducers({
   AppState,

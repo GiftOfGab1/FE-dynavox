@@ -7,8 +7,8 @@ import { Emoji } from '../Emoji/Emoji'
 
 
 function SubCategory(props) {
-  const { categoryName, img } = props
-  console.log(img)
+  const { categoryName } = props
+  // console.log(img)
     return(
         <section className='sub-category-container'>
         <Emoji className="sub-category-emoji"/>

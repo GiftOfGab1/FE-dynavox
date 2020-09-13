@@ -39,7 +39,6 @@ function App() {
           render={() => {
             return (
               <MainPage 
-                socialSettings={User && User.sections}
               />
             )
           }}

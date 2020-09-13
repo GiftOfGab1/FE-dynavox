@@ -4,6 +4,8 @@ import './MainPage.css';
 import useMainPage from './useMainPage'
 import { connect } from "react-redux"
 import { store } from '../../index'
+import PropTypes from 'prop-types';
+
 
 import BankImage from '../../Assets/SocialSettings/Bank.png'
 import PartyImage from '../../Assets/SocialSettings/Party.png'
@@ -23,6 +25,10 @@ function MainPage(props) {
 }
 const mapStateToProps = () => {
     return store.getState()
+}
+
+MainPage.propTypes = {
+  AppState: PropTypes.object.isRequired
 }
 
 export default connect(mapStateToProps)(MainPage);

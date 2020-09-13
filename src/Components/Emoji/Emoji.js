@@ -36,7 +36,7 @@ export const Emoji = props => {
 
   };
   const handleClick = async () => {
-    if(props.voice && props.speed) {
+    if(props.voice) {
       return await togglePlay(phraseName, voice, speed)
 
     }

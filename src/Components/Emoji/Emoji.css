@@ -42,6 +42,7 @@
 
 .hello:after {
   content: "👋", 
+
 }
 
 .night:after {

@@ -11,7 +11,6 @@ export const getVoiceData = async (textToSpeech, voice, rate) => {
     // const response = await fetch(`https://flask-microservice-speech.herokuapp.com/speech/${textToSpeech}/${rate}/${voice}`);
     const blob = response.blob();
     // console.log(base64)
-    console.log(blob)
 		return blob;
 	} catch (error) {
 		return error;

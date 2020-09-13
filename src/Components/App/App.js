@@ -6,11 +6,12 @@ import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
 import MainPage from '../MainPage/MainPage.js'
 import PhrasesPage from '../PhrasesPage/PhrasePage.js'
 import useApp from './useApp'
+import { useSelector } from 'react-redux'
 
 
 function App() {
   useApp()
-
+  const User = useSelector(state => state.AppState.userDetails)
 
 
   return (

@@ -1,70 +1,79 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
+import PhrasePage from '../PhrasesPage/PhrasePage'
 import "../Emoji/Emoji.css"
+import { connect } from "react-redux"
+import { store } from '../../index'
+import { Route } from 'react-router-dom'
+import PropTypes from 'prop-types';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay } from '../../Store/Actions';
 
-export const Emoji = props => {
-  // const [Audio, setAudio] = useState({});
+
+
+function Emoji (props) {
+  console.log(props)
+  
   const dispatch = useDispatch();
-  
   const { phraseName, voice, speed  } = props
-
-  
   const isPlaying = useSelector((state) => state.isPlaying)
-  // const { phraseInput, voice, voiceSpeed } = props
-
 
   const textToSpeech = async () => {
     const data = await handleTextToSpeech(phraseName, props.voice, props.speed);
-    // const audio = new Audio(data);
     return data;
   }
 
   const togglePlay = async () => {
 
-      const audio = await textToSpeech();
+    const audio = await textToSpeech();
 
-      if(isPlaying) {
-        await audio.pause();
-        audio.currentTime = 0;
-        return dispatch(stopPlay(), isPlaying)
-      } else {
-        await audio.play();
-        return dispatch(startPlay(), isPlaying) && dispatch(stopPlay(), isPlaying)
-      }
+    if (isPlaying) {
+      await audio.pause();
+      audio.currentTime = 0;
+      return dispatch(stopPlay(), isPlaying)
+    } else {
+      await audio.play();
+      return dispatch(startPlay(), isPlaying) && dispatch(stopPlay(), isPlaying)
+    }
 
-  };
+  }
+
   const handleClick = async () => {
-    if(props.voice) {
-      return await togglePlay(phraseName, voice, speed)
+    console.log("here")
+    if (props.voice) {
+      return await togglePlay(props.phraseName, voice, speed)
 
     }
   }
-  
-  return (
 
-  
-  <section className="emoji-background">
-    <span
-        className={`emoji ${props.img}`}
-        role="img"
-        aria-label={props.label ? props.label : ""}
-        aria-hidden={props.label ? "false" : "true"}
-        onClick={handleClick}
-    >
-        {/* {props.symbol} */}
-    </span>
-  </section>
+    return (
+      // <Link 
+      // id={name}
+      //   key={name} 
+      //   to={`/subCategories-page/${name}`} 
+      //   style={{ textDecoration: 'none', color: 'inherit' }}
+      // >
+        <section className="emoji-background">
+          <span
+            className={`emoji ${props.img}`}
+            role="img"
+            aria-label={props.label ? props.label : ""}
+            aria-hidden={props.label ? "false" : "true"}
+            onClick={handleClick}
+
+      >
+      </span>
+    </section>
+    // </Link> 
   )
 };
-
-
 Emoji.propTypes = {
   img: PropTypes.string,
   label: PropTypes.string,
- }
+}
 
-export default Emoji;
+const mapStateToProps = () => {
+  return store.getState()
+}
+
+export default connect(mapStateToProps)(Emoji);

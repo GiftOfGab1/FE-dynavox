@@ -13,8 +13,13 @@ export const getSocialSettings = async () => {
                             id
                             title
                             icon
+                            phrases { 
+                            expression 
+                            image,
+                            tags
+                             }
                         }
-        }`
+                    }`
             })
         })
         return response.json()

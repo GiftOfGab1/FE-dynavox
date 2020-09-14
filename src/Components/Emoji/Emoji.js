@@ -11,7 +11,8 @@ import { startPlay, stopPlay } from '../../Store/Actions';
 
 
 
-function Emoji ({ name }, props) {
+function Emoji (props) {
+  console.log(props)
   
   const dispatch = useDispatch();
   const { phraseName, voice, speed  } = props
@@ -38,8 +39,9 @@ function Emoji ({ name }, props) {
   }
 
   const handleClick = async () => {
+    console.log("here")
     if (props.voice) {
-      return await togglePlay(phraseName, voice, speed)
+      return await togglePlay(props.phraseName, voice, speed)
 
     }
   }

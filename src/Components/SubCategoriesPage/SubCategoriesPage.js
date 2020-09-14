@@ -13,7 +13,7 @@ function SubCategoriesPage(props) {
 
     return (
         <section
-            className='sub-categories-container'
+            className='phrase-page-container'
             onClick={(e) => {
             }}
         >

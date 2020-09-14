@@ -11,23 +11,24 @@ import { startPlay, stopPlay } from '../../Store/Actions';
 function Phrase(props) {
   const { expression } = props.categoryName
   const User = useSelector(state => state.AppState.userDetails)
+  console.log('props',props, User.voice, User.speed)
 
 
-  const dispatch = useDispatch();
-  const isPlaying = useSelector((state) => state.isPlaying)
-  const togglePlay = async (phraseInput, voice, voiceSpeed) => {
-    const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
-    const audio = new Audio(data);
+  // const dispatch = useDispatch();
+  // const isPlaying = useSelector((state) => state.isPlaying)
+  // const togglePlay = async (phraseInput, voice, voiceSpeed) => {
+  //   const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
+  //   const audio = new Audio(data);
 
-    if(isPlaying) {
-      audio.pause();
-      audio.currentTime = 0;
-      return dispatch(stopPlay(), isPlaying)
-    } else {
-      audio.play();
-      return dispatch(startPlay(), isPlaying) && dispatch(stopPlay(), isPlaying)
-    }
-  };
+  //   if(isPlaying) {
+  //     audio.pause();
+  //     audio.currentTime = 0;
+  //     return dispatch(stopPlay(), isPlaying)
+  //   } else {
+  //     audio.play();
+  //     return dispatch(startPlay(), isPlaying) && dispatch(stopPlay(), isPlaying)
+  //   }
+  // };
 
     // const { phraseName } = props
   
@@ -36,9 +37,9 @@ function Phrase(props) {
         <section className='phrase-container'
         >
             <Emoji
+              // label={expression}
+              phraseName={expression} 
               label={expression}
-              phraseName={props.phraseName} 
-              label={props.phraseName}
               voice={User.voice}
               speed={User.speed}
             />

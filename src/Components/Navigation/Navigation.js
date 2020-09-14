@@ -13,7 +13,7 @@ function Navigation() {
         <nav className='navigation'>
             <section className='button-container'>
 
-                <Link to="/main-page" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
                     <Button label={'Home'}/>
                     <p>Home</p>
                 </Link>
@@ -21,13 +21,14 @@ function Navigation() {
                     <Button label={'Settings'}/>
                     <p>Options</p>
                 </Link>  
-                {/* <Link  to={'thing'} style={{ textDecoration: 'none', color: 'inherit' }}>                  
-                  <Button label={'Help'}/>
+                <section>
+                  <Button label={'Help'}/> 
                   <p>Help</p>
-                </Link>
-                <Link  style={{ textDecoration: 'none', color: 'inherit' }}>              
+                  </section>
+                  <section>
                   <Button label={'Bathroom'}/><p>Bathroom</p>
-                </Link> */}
+                  </section>
+
             </section>
         </nav>
         

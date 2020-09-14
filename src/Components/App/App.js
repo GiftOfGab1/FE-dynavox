@@ -52,7 +52,7 @@ function App() {
         />
       </Switch>
       <Route
-        path='/'
+        exact path='/'
         render={() => {
           return (
             <MainPage />

@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Phrase.css';
 import Emoji from '../Emoji/Emoji'
-
+import PropTypes from 'prop-types';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay } from '../../Store/Actions';
 
 
+
 function Phrase(props) {
   const { expression } = props.categoryName
+  const User = useSelector(state => state.AppState.userDetails)
+
 
   const dispatch = useDispatch();
   const isPlaying = useSelector((state) => state.isPlaying)
@@ -27,21 +30,25 @@ function Phrase(props) {
   };
 
     // const { phraseName } = props
+  
+
     return (
         <section className='phrase-container'
-          onclick={togglePlay}
         >
-            <Emoji 
+            <Emoji
               label={expression}
-              // onClick={(e) => {
-              //   console.log('hi');
-              //   e.preventDefault()
-              //   console.log(e.target.key)
-              // }}
+              phraseName={props.phraseName} 
+              label={props.phraseName}
+              voice={User.voice}
+              speed={User.speed}
             />
             <p>{expression}</p>
         </section>
     )
+}
+
+Phrase.propTypes = {
+  phraseName: PropTypes.string.isRequired
 }
 
 export default Phrase

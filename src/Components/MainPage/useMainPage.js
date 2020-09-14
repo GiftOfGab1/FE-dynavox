@@ -5,10 +5,16 @@ import { useDispatch } from "react-redux"
 import { getSocialSettings } from '../../Api/getSocialSettings'
 import { setSocialSettings } from '../../Store/Actions/index'
 import  setAllSocialSettings  from '../../Store/Reducers/index'
+import { useSelector } from 'react-redux'
 
 
 function useMainPage(socialSettings) {
-   
+  
+
+  const User = useSelector(state => state.AppState.userDetails)
+  // const useMountEffect = (fun) => useEffect(fun, [])
+  
+
     const dispatch = useDispatch();
 
     const getAllSocialSettings = async () => {
@@ -32,7 +38,9 @@ function useMainPage(socialSettings) {
     }
 
     useEffect(() => {
-        !socialSettings && getAllSocialSettings()
+        if(User && !socialSettings)  {
+          getAllSocialSettings()
+        }
     })
 
     return socialSettings && createSubCategories(socialSettings)

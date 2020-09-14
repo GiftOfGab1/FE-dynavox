@@ -42,6 +42,7 @@
 
 .hello:after {
   content: "👋", 
+
 }
 
 .night:after {
@@ -66,6 +67,7 @@
 .card:after {
   content: "💳"
 }
+
 .thanks:after {
   content: "🙏"
 }

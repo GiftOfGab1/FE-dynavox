@@ -1,6 +1,6 @@
 import React from 'react'
 import './Phrase.css';
-import { Emoji } from '../Emoji/Emoji'
+import Emoji from '../Emoji/Emoji'
 
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
@@ -8,16 +8,14 @@ import { startPlay, stopPlay } from '../../Store/Actions';
 
 
 function Phrase(props) {
-
-  // const { phraseInput, voice, voiceSpeed } = props
+  const { expression } = props.categoryName
 
   const dispatch = useDispatch();
   const isPlaying = useSelector((state) => state.isPlaying)
-
   const togglePlay = async (phraseInput, voice, voiceSpeed) => {
     const data = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
     const audio = new Audio(data);
-    // setAudioData(audio);
+
     if(isPlaying) {
       audio.pause();
       audio.currentTime = 0;
@@ -28,15 +26,20 @@ function Phrase(props) {
     }
   };
 
-    const { phraseName } = props
+    // const { phraseName } = props
     return (
         <section className='phrase-container'
           onclick={togglePlay}
         >
             <Emoji 
-              label={props.phraseName}
+              label={expression}
+              // onClick={(e) => {
+              //   console.log('hi');
+              //   e.preventDefault()
+              //   console.log(e.target.key)
+              // }}
             />
-            <p>{phraseName}</p>
+            <p>{expression}</p>
         </section>
     )
 }

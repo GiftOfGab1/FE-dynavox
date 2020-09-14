@@ -20,7 +20,13 @@ function useMainPage(socialSettings) {
     const createSubCategories = (socialSettings) => {
         const allButQuickResponses =  socialSettings.filter(socialSetting => socialSetting.title !== 'Quick Responses')
         const subCategories = allButQuickResponses.map(response => {
-           return  <Link key={response.title} to="/phrases-page" style={{ textDecoration: 'none', color: 'inherit' }}><SubCategory categoryName={response.title} /></Link>
+            return <Link 
+                        key={response.title} 
+                        to={`/subCategories-page/${response.title}`}
+                        style={{ textDecoration: 'none', color: 'inherit' }}
+                    >
+                        <SubCategory categoryName={response.title} routeTo={'subCategories-Page'}/>
+                    </Link>
         })
         return subCategories
     }

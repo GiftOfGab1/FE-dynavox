@@ -1,18 +1,30 @@
 import React from 'react'
-import Phrase from '../Phrase/Phrase'
+import { connect } from "react-redux"
+import { store } from '../../index'
 import './PhrasePage.css';
+import usePhrasePage from './usePhrasePage';
 
 
-function PhrasePage() {
+function PhrasePage(props) {
+
+    const { name, id } = props
+    const { socialSettings } = props.AppState
+    const relatedPhrases = usePhrasePage(id, name, socialSettings)
+    console.log(relatedPhrases);
+    
     return (
-        <section className='phrase-page-container'>
-            <Phrase className='phrase' phraseName={'Hi'} />
-            <Phrase className='phrase' phraseName={'Yo'} />
-            <Phrase className='phrase' phraseName={'Sup'} />
-            <Phrase className='phrase' phraseName={'Hey'} />
-            
+        <section 
+        className='phrase-page-container'
+        onClick={(e) => {
+            console.log(e.target);
+        }}
+        >   
+        {relatedPhrases}
         </section>
     )
 }
 
-export default PhrasePage
+const mapStateToProps = () => {
+    return store.getState()
+}
+export default connect(mapStateToProps)(PhrasePage);

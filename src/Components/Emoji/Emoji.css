@@ -41,18 +41,25 @@
   }
 
 
+
 .hello:after {
   content: "👋", 
-
 }
 
+.bank:after {
+  content: "🏦", 
+}
+.morning:after {
+  content: "🌅"
+}
+
+.afternoon:after {
+  content: "🏙", 
+}
 .night:after {
   content: "🌃"
 }
 
-.morning:after {
-  content: "🌅"
-}
 .yes:after {
   content: "👍"
 }
@@ -60,7 +67,9 @@
 .no:after {
   content: "🚫"
 }
-
+.great:after {
+  content: "😀"
+}
 .perfect:after {
   content: "👌"
 }
@@ -72,7 +81,83 @@
 .thanks:after {
   content: "🙏"
 }
+.withdrawal:after {
+  content: "💰"
+}
 
+.deposit:after {
+  content: "💸"
+}
+.memo:after {
+  content: "📝"
+}
+.bank-note:after {
+  content: "💵"
+}
 
+.great-day:after {
+  content: "😄"
+}
 
+.x-hands:after {
+  content: '🙅‍♀️'
+}
+.party:after {
+  content: '🎉'
+}
+.yes:after {
+  content: '👍'
+}
+.no:after {
+  content: '🚫'
+}
+.sup:after {
+  content: '👋'
+}
+.yo:after {
+  content: '🪀'
+}
+.hundred:after {
+  content: '💯'
+}
+.rabbit:after {
+  content: '🐇'
+}
+.joke-1:after {
+  content: '🤣'
+}
+
+.joke-2:after {
+  content: '🙉'
+}
+
+.dog:after {
+  content: '🐶'
+}
+.rtj:after {
+  content: '🤜👈🏿'
+}
+.school:after {
+  content: '🎒'
+}
+.drink:after {
+  content: '🥃'
+}
+.peace:after {
+  content: '✌️'
+}
+.wave:after {
+  content: '👋'
+}
+.felica:after {
+  content: '👋👩'
+}
+
+.sos:after {
+  content: '🆘'
+}
+
+.toilet:after {
+  content: '🚽'
+}
 

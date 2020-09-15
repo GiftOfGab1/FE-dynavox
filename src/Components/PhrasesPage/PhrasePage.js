@@ -22,9 +22,9 @@ function PhrasePage(props) {
           <section className='add-phrase-container'>
             <section className='add-phrase-button'>
               <Link
-                  key={'name'}
+                  key={name}
                   id={'id'}
-                  to={`/addPhrase/${id}/${name}`}
+                  to={`/addPhrase/${name}/${id}`}
                   style={{ textDecoration: 'none', color: 'inherit' }}
               ><section> ➕ add phrase </section>
                   {/* <AddPhraseForm  name={name}  id={id}  /> */}

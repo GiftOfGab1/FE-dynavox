@@ -7,7 +7,6 @@ import { useSelector } from 'react-redux'
 
 function Phrase(props) {
   const { expression } = props.categoryName
-  console.log(props.categoryName.image)
   const User = useSelector(state => state.AppState.userDetails)
   
     return (

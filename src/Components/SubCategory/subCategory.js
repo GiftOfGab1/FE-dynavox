@@ -7,7 +7,6 @@ import Emoji from '../Emoji/Emoji'
 
 function SubCategory(props) {
     const { categoryName, phrases} = props   
-    console.log(props) 
 
     return(
         <section className='sub-category-container'>

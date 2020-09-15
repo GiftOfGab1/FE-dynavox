@@ -23,7 +23,7 @@ Button.propTypes = {
   name: PropTypes.string,
   value: PropTypes.number,
   onClick: PropTypes.func,
-  label: PropTypes.string.isRequired
+  label: PropTypes.string
 }
 
 export default Button

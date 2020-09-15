@@ -5,7 +5,6 @@ import { checkPropTypes } from 'prop-types';
 
 
 function useSubCategoriesPage(name, socialSettings) {
-    console.log(name);
     const relatedPhrases = socialSettings && socialSettings.find(socialSetting => socialSetting.title === name)
 
 
@@ -31,7 +30,7 @@ function useSubCategoriesPage(name, socialSettings) {
     const renderSubCategories = (relatedPhrasesObj) => {
         const relatedPhrasesKeys = Object.keys(relatedPhrasesObj)
         return relatedPhrasesKeys.map(key => {
-            console.log(key);
+  
             return (
             <Link
                 name={name}

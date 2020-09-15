@@ -26,7 +26,6 @@ function useMainPage(socialSettings) {
     const createSubCategories = (socialSettings) => {
         const allButQuickResponses =  socialSettings.filter(socialSetting => socialSetting.title !== 'Quick Responses')
         const subCategories = allButQuickResponses.map(response => {
-          console.log(response)
             return <Link 
                         key={response.title} 
                         to={`/subCategories-page/${response.title}`}

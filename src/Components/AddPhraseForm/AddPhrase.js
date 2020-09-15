@@ -11,7 +11,7 @@ import setUserDetails from '../../Store/Reducers/index'
 // import Button from '../Button/Button'
 
 function AddPhraseForm (name, id) {
-  console.log(name, "name", id, 'id')  
+
 
 
   const isPlaying = useSelector((state) => state.AppState.isPlaying)

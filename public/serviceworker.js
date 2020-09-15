@@ -1,6 +1,5 @@
 const CACHE_NAME = "version-1";
 const urlsToCache = ['index.html'];
-
 const self = this;
 
 // Installation SW
@@ -35,11 +34,13 @@ self.addEventListener('activate', (event) => {
     console.log(caches);
     event.waitUntil(
         caches.keys().then((cacheNames) => Promise.all(
-            cacheNames.map((cacheName) => {
-                if (!cacheWhiteList.includes(cacheName)) {
-                    return caches.delete(cacheName)
-            }
-        })
-    ))
-)
+            // cacheNames.map((cacheName) => {
+            //     if (!cacheWhiteList.includes(cacheName)) {
+            //         return caches.delete(cacheName)
+            //     }
+            // })
+            caches.delete(cacheNames)
+
+        ))
+    )
 })

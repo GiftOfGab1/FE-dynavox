@@ -8,7 +8,7 @@ function usePhrasePage(id, name, socialSettings) {
     const subSettingPhrases = currentSetting.phrases.filter(phrase => phrase.tags[0] === id)
     return subSettingPhrases.map(phrase => {
         return (<Link
-            key={'name'}
+            key={name}
             to={`/subCategories-page/${name}`}
             style={{ textDecoration: 'none', color: 'inherit' }}
         >

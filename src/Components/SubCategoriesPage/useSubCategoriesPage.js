@@ -1,6 +1,7 @@
 import React from 'react'
 import SubCategory from '../SubCategory/subCategory'
 import { Link } from 'react-router-dom'
+import { checkPropTypes } from 'prop-types';
 
 
 function useSubCategoriesPage(name, socialSettings) {
@@ -38,7 +39,7 @@ function useSubCategoriesPage(name, socialSettings) {
                 to={`/phrase-page/${ name }/${ key }`}
                 style={{ textDecoration: 'none', color: 'inherit' }}
             >   
-                <SubCategory categoryName={key}  />
+                <SubCategory categoryName={key} image={key}/>
             </Link>
             )
         })

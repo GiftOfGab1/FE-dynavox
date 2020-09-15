@@ -45,7 +45,7 @@ function Emoji (props) {
       
         <section className="emoji-background">
           <span
-            className={`emoji ${props.img}`}
+            className={`emoji ${props.image}`}
             role="img"
             aria-label={props.label ? props.label : ""}
             aria-hidden={props.label ? "false" : "true"}

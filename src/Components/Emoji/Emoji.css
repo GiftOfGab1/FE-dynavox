@@ -1,11 +1,11 @@
 .emoji:after {
-  content : "👍";
+  /* content : "👍"; */
   margin: 0px !important;
   font-size: 4em;
   vertical-align: middle;
   /* display: inline !important; */
-  height: auto;
-  width: 50px; 
+  height: 50px;
+  min-width: 50px; 
 }
 
 .emoji-background {
@@ -43,18 +43,18 @@
 
 
 .hello:after {
-  content: "👋", 
+  content: "👋"
 }
 
 .bank:after {
-  content: "🏦", 
+  content: "🏦" 
 }
 .morning:after {
   content: "🌅"
 }
 
 .afternoon:after {
-  content: "🏙", 
+  content: "🏙" 
 }
 .night:after {
   content: "🌃"
@@ -135,7 +135,7 @@
   content: '🐶'
 }
 .rtj:after {
-  content: '🤜👈🏿'
+  content: '🎹'
 }
 .school:after {
   content: '🎒'
@@ -149,15 +149,29 @@
 .wave:after {
   content: '👋'
 }
-.felica:after {
-  content: '👋👩'
+.felicia:after {
+  content: '👩'
 }
 
 .sos:after {
   content: '🆘'
 }
 
-.toilet:after {
-  content: '🚽'
+.Greetings:after {
+  content: '🤝'
 }
-
+.Common:after {
+  content: '😎'
+}
+.Transactions:after {
+  content: '💰'
+}
+.Goodbyes:after {
+  content: '👋'
+}
+.Jokes:after {
+  content: '😜'
+}
+.Joe:after {
+  content: '😊'
+} 

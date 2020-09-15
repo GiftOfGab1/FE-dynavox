@@ -13,6 +13,7 @@ function Button(props) {
                 value={value}
                 onClick={onClick}>
                 {/* {props.label} */}
+            {props.name}
             </button>
         </div>
     )

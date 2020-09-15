@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 
 function Button(props) {
-    // const { voiceSpeed, setVoiceSpeed, value, name, onClick } = props
     const { value, name, onClick } = props
     return (
         <div className='button-container'>
@@ -12,7 +11,6 @@ function Button(props) {
                 name={name}
                 value={value}
                 onClick={onClick}>
-                {/* {props.label} */}
             {props.name}
             </button>
         </div>

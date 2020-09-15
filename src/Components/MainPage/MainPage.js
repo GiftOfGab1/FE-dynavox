@@ -24,4 +24,3 @@ MainPage.propTypes = {
 }
 
 export default connect(mapStateToProps)(MainPage);
-

@@ -63,9 +63,6 @@ export default (state = userInitialState, action) => {
     }
     default: {
       return state
-      // throw new Error(`Unhandled type: ${action.type}`)
     }
   }
 }
-
-// export default rootReducer

@@ -9,41 +9,38 @@ import { useSelector } from 'react-redux'
 
 
 function useMainPage(socialSettings) {
-  
 
   const User = useSelector(state => state.AppState.userDetails)
-  // const useMountEffect = (fun) => useEffect(fun, [])
-  
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const getAllSocialSettings = async () => {
-        const socialSettings = await getSocialSettings()
-        dispatch(setSocialSettings(socialSettings.data.sections, setAllSocialSettings))
-        return socialSettings
-    }
+  const getAllSocialSettings = async () => {
+      const socialSettings = await getSocialSettings()
+      dispatch(setSocialSettings(socialSettings.data.sections, setAllSocialSettings))
+      return socialSettings
+  }
 
-    const createSubCategories = (socialSettings) => {
-        const allButQuickResponses =  socialSettings.filter(socialSetting => socialSetting.title !== 'Quick Responses')
-        const subCategories = allButQuickResponses.map(response => {
-            return <Link 
-                        key={response.title} 
-                        to={`/subCategories-page/${response.title}`}
-                        style={{ textDecoration: 'none', color: 'inherit' }}
-                    >
-                        <SubCategory categoryName={response.title} image={response.icon} routeTo={'subCategories-Page'}/>
-                    </Link>
-        })
-        return subCategories
-    }
+  const createSubCategories = (socialSettings) => {
+      const allButQuickResponses =  socialSettings.filter(socialSetting => socialSetting.title !== 'Quick Responses')
+      const subCategories = allButQuickResponses.map(response => {
+          return <Link 
+                      key={response.title} 
+                      to={`/subCategories-page/${response.title}`}
+                      style={{ textDecoration: 'none', color: 'inherit' }}
+                  >
+                      <SubCategory categoryName={response.title} image={response.icon} routeTo={'subCategories-Page'}/>
+                  </Link>
+      })
+      return subCategories
+  }
 
-    useEffect(() => {
-        if(User && !socialSettings)  {
-          getAllSocialSettings()
-        }
-    })
+  useEffect(() => {
+      if(User && !socialSettings)  {
+        getAllSocialSettings()
+      }
+  })
 
-    return socialSettings && createSubCategories(socialSettings)
+  return socialSettings && createSubCategories(socialSettings)
 }
 
 

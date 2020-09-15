@@ -62,16 +62,31 @@ describe('ChooseVoiceForm', () => {
     })
   })
 
-  it('should return to the main page after a phrase is played', () =>{
+  it('should return to the subCategories page after a phrase is played', () =>{
     cy.get('.sub-category-container').contains('Bank').click()
     cy.get('.sub-category-container').contains('Greetings').click()
     cy.get('.phrase-container').contains('Hello').click()
-    // .within(() => {
-    //   cy.get('h4')
-    // })
-    // .click()
-    // cy.location().should((location) => {
-    //   expect(location.pathname).to.eq('/phrase-page/Bank/Greetings')
-    // })
+    cy.location().should((location) => {
+      expect(location.pathname).to.eq('/subCategories-page/Bank')
+    })
+  })
+
+  it('should take you back to the main page when you click Back' , () => {
+    cy.get('.sub-category-container').contains('Bank').click()
+    cy.get('.button-container').within(() => {
+      cy.get('button').contains('Back').click()
+    })
+  })
+
+  it('should take you back to the main page when you click Home button' , () => {
+    cy.get('.sub-category-container').contains('Bank').click()
+    cy.get('.sub-category-container').contains('Greetings').click()
+    cy.get('.navigation').within(() => {
+      cy.get('p').contains('Home').click()
+    })
+
+    cy.location().should((location) => {
+      expect(location.pathname).to.eq('/')
+    })
   })
 })

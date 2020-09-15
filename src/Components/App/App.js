@@ -33,7 +33,6 @@ function App() {
           render={(routeProps) => {
             const { params } = routeProps.match
             const { name, key } = params
-            console.log(params);
             return (
               <PhrasePage name={name} id={key}/>
             )

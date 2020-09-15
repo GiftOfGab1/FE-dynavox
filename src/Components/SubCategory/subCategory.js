@@ -1,6 +1,5 @@
 import React from 'react'
 import './subCategory.css'
-import { Link } from 'react-router-dom'
 import './subCategory.css';
 import PropTypes from 'prop-types';
 import Emoji from '../Emoji/Emoji'

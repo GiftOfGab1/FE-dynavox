@@ -15,7 +15,7 @@ function SubCategoriesPage(props) {
 
     return (
         <>
-        <section>
+        <section className='sub-category-page-container'>
             <Link
                 key={'Back'}
                 to={'/'}

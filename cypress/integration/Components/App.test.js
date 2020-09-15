@@ -1,6 +1,4 @@
-import React from 'react'
-
-describe('ChooseVoiceForm', () => {
+describe('App', () => {
   
   beforeEach(() => {
     cy.visit('http://localhost:3000/')

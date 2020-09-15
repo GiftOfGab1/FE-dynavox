@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom'
 
 
 function usePhrasePage(id, name, socialSettings) {
-    console.log(id);
-    console.log(name);
     const currentSetting = socialSettings.find(socialSetting => socialSetting.title === name)
     const subSettingPhrases = currentSetting.phrases.filter(phrase => phrase.tags[0] === id)
     return subSettingPhrases.map(phrase => {

@@ -4,7 +4,7 @@ import { store } from '../../index'
 import './PhrasePage.css';
 import usePhrasePage from './usePhrasePage';
 import { Link } from 'react-router-dom'
-import AddPhraseForm from '../AddPhraseForm/AddPhrase'
+// import AddPhraseForm from '../AddPhraseForm/AddPhrase'
 
 
 

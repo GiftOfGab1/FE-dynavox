@@ -6,8 +6,8 @@ import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 // import { addPhrasePost } from '../../Api/addPhrase'
 
 import { useDispatch, useSelector } from "react-redux";
-import { startPlay, stopPlay, setUser } from '../../Store/Actions';
-import setUserDetails from '../../Store/Reducers/index'
+import { startPlay, stopPlay} from '../../Store/Actions';
+// import setUserDetails from '../../Store/Reducers/index'
 // import Button from '../Button/Button'
 
 function AddPhraseForm (name, id) {
@@ -58,8 +58,9 @@ function AddPhraseForm (name, id) {
       <form 
           className='add-phrase-form'
           onSubmit={(e) => {
-            e.preventDefault()
+            // e.preventDefault()
             e.stopPropagation()
+            handleFormSubmit(e)
           }}
       >
           <h1>Add Phrase</h1>

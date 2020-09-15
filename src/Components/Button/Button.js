@@ -19,10 +19,10 @@ function Button(props) {
 }
 
 Button.propTypes = {
-   name: PropTypes.string,
-   value: PropTypes.number,
-   onClick: PropTypes.func,
-   label: PropTypes.string.isRequired
-  }
+  name: PropTypes.string,
+  value: PropTypes.number,
+  onClick: PropTypes.func,
+  label: PropTypes.string.isRequired
+}
 
 export default Button

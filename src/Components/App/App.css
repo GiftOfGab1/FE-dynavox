@@ -15,6 +15,7 @@
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
+  overflow-y: scroll;
 }
 
 .App-logo {

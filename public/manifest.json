@@ -3,9 +3,10 @@
   "name": "Gift of Gab",
   "icons": [
     {
-      // "src": ,
+      "src": "./SocialSettings/gifOfGabLogo.png",
       "type": "image/png",
-      "sizes": "1024x1024"
+      "sizes": "1024x1024",
+      "purpose": "maskable any"
     }
   ],
   "start_url": ".",

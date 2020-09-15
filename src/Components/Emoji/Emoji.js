@@ -34,7 +34,7 @@ function Emoji (props) {
   }
 
   const handleClick = async () => {
-    console.log("here")
+
     if (props.voice) {
       return await togglePlay(props.phraseName, voice, speed)
 
@@ -45,7 +45,7 @@ function Emoji (props) {
       
         <section className="emoji-background">
           <span
-            className={`emoji ${props.img}`}
+            className={`emoji ${props.image}`}
             role="img"
             aria-label={props.label ? props.label : ""}
             aria-hidden={props.label ? "false" : "true"}

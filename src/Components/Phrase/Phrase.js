@@ -6,14 +6,14 @@ import { useSelector } from 'react-redux'
 
 
 function Phrase(props) {
-
   const { expression } = props.categoryName
   const User = useSelector(state => state.AppState.userDetails)
-
+  
     return (
         <section className='phrase-container'
         >
             <Emoji
+              image={props.categoryName.image}
               phraseName={expression} 
               label={expression}
               voice={User.voice}

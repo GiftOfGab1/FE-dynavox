@@ -1,10 +1,11 @@
+
 .form-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.choose-voice-form {
+.add-phrase-form {
   box-shadow: -1px 1px 5px 0px #F52110, 2px 3px 18px 1px #F52110;
   display: flex;
   flex-direction: column;
@@ -17,7 +18,8 @@
   border-radius: 1%;
 }
 
-.voice-selector-input {
+.phrase-input {
+  margin-bottom: 5px;
   padding: .25em;
   height: 2em;
   width: 20em;
@@ -66,11 +68,16 @@
   border: 3px solid #f9f9f9;
 }
 
+label {
+  margin-bottom: 5px;
+}
+#icon-select {
+  text-align-last: center;
+}
 .faster-button:hover{
   border: 3px solid #F52110;
   background-color: black;
   box-shadow: 1px, 1px, 200px, #F39C12 ;
-  /* color: white; */
 }
 
 .slower-button:hover{
@@ -78,7 +85,7 @@
 }
 
 @media all and (max-width: 470px) and (min-width: 200px) {
-  .choose-voice-form {
-    height: 65%;
+  .phrase-input {
+    width: 95%;
   }
 }

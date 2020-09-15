@@ -1,10 +1,10 @@
 import React from 'react'
 import SubCategory from '../SubCategory/subCategory'
 import { Link } from 'react-router-dom'
+// import { checkPropTypes } from 'prop-types';
 
 
 function useSubCategoriesPage(name, socialSettings) {
-    console.log(name);
     const relatedPhrases = socialSettings && socialSettings.find(socialSetting => socialSetting.title === name)
 
 
@@ -30,7 +30,7 @@ function useSubCategoriesPage(name, socialSettings) {
     const renderSubCategories = (relatedPhrasesObj) => {
         const relatedPhrasesKeys = Object.keys(relatedPhrasesObj)
         return relatedPhrasesKeys.map(key => {
-            console.log(key);
+  
             return (
             <Link
                 name={name}
@@ -38,7 +38,7 @@ function useSubCategoriesPage(name, socialSettings) {
                 to={`/phrase-page/${ name }/${ key }`}
                 style={{ textDecoration: 'none', color: 'inherit' }}
             >   
-                <SubCategory categoryName={key}  />
+                <SubCategory categoryName={key} image={key}/>
             </Link>
             )
         })

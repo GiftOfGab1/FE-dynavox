@@ -12,7 +12,6 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import './index.css'
 import AppState from './Store/Reducers/index'
 
-// import rootReducer  from './Store/Reducers/index'
 const appReducer = combineReducers({
   AppState,
 })
@@ -34,10 +33,7 @@ const router = (
   </Provider>
 )
 
-
 ReactDOM.render(
   router, 
   document.getElementById('root')
 );
-
-

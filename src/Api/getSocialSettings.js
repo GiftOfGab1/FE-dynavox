@@ -17,7 +17,7 @@ export const getSocialSettings = async () => {
                             expression 
                             image,
                             tags
-                             }
+                            }
                         }
                     }`
             })

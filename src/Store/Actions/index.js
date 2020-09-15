@@ -1,6 +1,6 @@
 export const setSocialSettings = socialSettings => ({
-    type: 'SET_SOCIAL_SETTINGS',
-    socialSettings
+  type: 'SET_SOCIAL_SETTINGS',
+  socialSettings
 });
 
 export const addSocialSetting = socialSettings => ({
@@ -9,23 +9,23 @@ export const addSocialSetting = socialSettings => ({
 })
 
 export const getSubCategories = subCategories => ({
-    type: 'GET_SUBCATEGORIES',
-    subCategories
+  type: 'GET_SUBCATEGORIES',
+  subCategories
 });
 
 export const addSubCategory = subCategory => ({
-    type: 'ADD_SUBCATEGORY',
-    subCategory
+  type: 'ADD_SUBCATEGORY',
+  subCategory
 });
 
 export const getPhrases = phrases => ({
-    type: 'GET_PHRASES',
-    phrases
+  type: 'GET_PHRASES',
+  phrases
 });
 
 export const addPhrases = phrase => ({
-    type: 'ADD_PHRASE',
-    phrase
+  type: 'ADD_PHRASE',
+  phrase
 });
 export const startPlay = isPlaying => ({
   type: 'START_PLAY', 

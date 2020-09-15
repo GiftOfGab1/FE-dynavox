@@ -10,8 +10,6 @@ const dispatch = useDispatch();
 const [phraseInput, setPhraseInput] = useState('')
 const [voice, setVoice] = useState('default')
 const [voiceSpeed, setVoiceSpeed] = useState(0)
-// const [playing, setPlay] = useState(false);
-// const [audioData, setAudioData] = useState({});
 
 function useChooseVoiceForm() {
 
@@ -30,16 +28,7 @@ function useChooseVoiceForm() {
     };
 
     const updateUserSettings = async () => {
-    // const user = useSelector((state) => state.userDetails)
-    // console.log(user)
         const userResponse = await updateUserPost(voice, voiceSpeed)
-    // const voiceUpdate = userResponse.data.updateUser.user.voice
-    // const speedUpdate = userResponse.data.updateUser.user.speed
-    // console.log(user)
-    // user.voice = voiceUpdate 
-    // user.speed = speedUpdate
-    // event.preventDefault()
-    // return dispatch(setUser(user, setUserDetails))
         return dispatch(setUser(userResponse.data.updateUser.user, setUserDetails))
     }
 

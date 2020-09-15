@@ -14,24 +14,24 @@ function SubCategoriesPage(props) {
 
 
     return (
-        <>
+      <>
         <section className='sub-category-page-container'>
-            <Link
-                key={'Back'}
-                to={'/'}
-                style={{ textDecoration: 'none', color: 'inherit' }}
-            >
-            <Button name={'Back'} />
-            </Link>
+          <Link
+              key={'Back'}
+              to={'/'}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+          >
+          <Button name={'Back'} />
+          </Link>
         </section>
         <section
-            className='phrase-page-container'
-            onClick={(e) => {
-            }}
+          className='phrase-page-container'
+          onClick={(e) => {
+          }}
         >
-            {relatedPhrases && relatedPhrases}
+          {relatedPhrases && relatedPhrases}
         </section>
-        </>
+      </>
     )
 }
 

@@ -26,7 +26,7 @@ function PhrasePage(props) {
                   id={'id'}
                   to={`/addPhrase/${name}/${id}`}
                   style={{ textDecoration: 'none', color: 'inherit' }}
-              ><section> ➕ add phrase </section>
+              ><section><span role='img' aria-label='add a phrase'>➕ add phrase</span></section>
                   {/* <AddPhraseForm  name={name}  id={id}  /> */}
               </Link>
             </section>

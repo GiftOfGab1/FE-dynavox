@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 //This needs to be changed to ChooseVoice once I have access rights to the repo
 import './AddPhrase.css';
-import Emoji from "../Emoji/Emoji"
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { postPhrase } from '../../Api/postPhrase'
 

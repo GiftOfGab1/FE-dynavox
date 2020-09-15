@@ -15,7 +15,7 @@ function ChooseVoiceForm() {
     //State
 
     
-    const isPlaying = useSelector((state) => state.isPlaying)
+    const isPlaying = useSelector((state) => state.AppState.isPlaying)
     const dispatch = useDispatch();
 
     const [phraseInput, setPhraseInput] = useState('')

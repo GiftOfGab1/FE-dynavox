@@ -18,6 +18,10 @@
 .navigation {
     width: 100%;
 }
+.addPhrase {
+  content: "➕"
+}
+
 p {
   font-size: .7em;
 }

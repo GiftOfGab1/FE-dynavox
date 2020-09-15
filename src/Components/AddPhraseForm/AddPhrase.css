@@ -5,94 +5,82 @@
   justify-content: center;
 }
 
-/* .choose-voice-form button{
-  box-shadow: none;
-} */
-
 .add-phrase-form {
-box-shadow: -1px 1px 5px 0px #F52110, 2px 3px 18px 1px #F52110;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-background-color: #F39C12;
-height: 58%;
-padding: .8em;
-width: 70%;
-border-radius: 1%;
+  box-shadow: -1px 1px 5px 0px #F52110, 2px 3px 18px 1px #F52110;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F39C12;
+  height: 58%;
+  padding: .8em;
+  width: 70%;
+  border-radius: 1%;
 }
 
 .phrase-input {
-padding: .25em;
-height: 2em;
-width: 20em;
-background: #282e33;
-border: none;
-color: white;
-border-radius: 15px;
-min-height: 30px;
-box-shadow: inset 4px 7px 13px 0px #00000061, inset -2px -2px 4px 0px #8f8f8f1c;
-border-bottom: 1px solid white;
+  margin-bottom: 5px;
+  padding: .25em;
+  height: 2em;
+  width: 20em;
+  background: #282e33;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  min-height: 30px;
+  box-shadow: inset 4px 7px 13px 0px #00000061, inset -2px -2px 4px 0px #8f8f8f1c;
+  border-bottom: 1px solid white;
 }
 
 .voice-setting-container {
-height: 10em;
-margin-top: 5%;
-display: flex;
-justify-content: space-around;
-width: 17em;
+  height: 10em;
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  width: 17em;
 }
 
 .setting-label {
-margin-bottom: .5em;
+  margin-bottom: .5em;
 }
 
 .voice-speed-container, .voice-pitch-container {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .voice-setting {
-margin: .5em 0em;
+  margin: .5em 0em;
 }
 
 .play-save-container {
-display: flex;
-justify-content: space-around;
-width: 17em;
+  display: flex;
+  justify-content: space-around;
+  width: 17em;
 }
 
 .save-and-play-buttons {
-border: 3px solid #F52110;
-/* background-color: white; */
-/* box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C;
-border-radius: 15px; */
-margin: 5px;
+  border: 3px solid #F52110;
+  margin: 5px;
 }
 
 .save-and-play-buttons:hover{
-border: 3px solid #f9f9f9;
-/* background-color: #F52110; */
-/* box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white */
+  border: 3px solid #f9f9f9;
 }
 
+label {
+  margin-bottom: 5px;
+}
 
 .faster-button:hover{
-border: 3px solid #F52110;
-background-color: black;
-box-shadow: 1px, 1px, 200px, #F39C12 ;
-/* color: white; */
+  border: 3px solid #F52110;
+  background-color: black;
+  box-shadow: 1px, 1px, 200px, #F39C12 ;
 }
-
-
 
 .slower-button:hover{
-border: 3px solid #F52110;
-/* box-shadow: none;
-background-color: black;
-color: white; */
+  border: 3px solid #F52110;
 }
-
 
 @media all and (max-width: 470px) and (min-width: 200px) {
   .phrase-input {

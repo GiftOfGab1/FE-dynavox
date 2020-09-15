@@ -1,9 +1,9 @@
 import React from 'react';
-import PhrasePage from '../PhrasesPage/PhrasePage'
+// import PhrasePage from '../PhrasesPage/PhrasePage'
 import "../Emoji/Emoji.css"
 import { connect } from "react-redux"
 import { store } from '../../index'
-import { Route } from 'react-router-dom'
+// import { Route } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";

@@ -10,7 +10,6 @@ function PhrasePage(props) {
     const { name, id } = props
     const { socialSettings } = props.AppState
     const relatedPhrases = usePhrasePage(id, name, socialSettings)
-    console.log(relatedPhrases);
     
     return (
         <section 

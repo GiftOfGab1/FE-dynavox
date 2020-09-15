@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux'
 
 function App() {
   useApp()
-  const User = useSelector(state => state.AppState.userDetails)
+  // const User = useSelector(state => state.AppState.userDetails)
 
 
   return (

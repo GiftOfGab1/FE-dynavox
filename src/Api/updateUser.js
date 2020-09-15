@@ -8,25 +8,26 @@ export const updateUser = async (voice, speed) => {
             },
             body: JSON.stringify({
                 query: `
-        mutation {
-          updateUser(input: {
-            id: 1 
-            voice: "${voice}"
-            speed: ${speed}
-          }) { 
-            user {
-            firstName 
-            lastName 
-            email 
-            voice 
-            speed 
-            sections { 
-              title 
-              icon 
-              phrases { 
-                expression 
-                image } } 
-              } } }`
+                  mutation {
+                    updateUser(input: {
+                      id: 1 
+                      voice: "${voice}"
+                      speed: ${speed}
+                    }) { 
+                      user {
+                      firstName 
+                      lastName 
+                      email 
+                      voice 
+                      speed 
+                      sections { 
+                        title 
+                        icon 
+                        phrases { 
+                          expression 
+                          image 
+                        } } 
+                      } } }`
             })
         })
         return response.json()

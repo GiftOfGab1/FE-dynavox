@@ -71,7 +71,9 @@
 label {
   margin-bottom: 5px;
 }
-
+#icon-select {
+  text-align-last: center;
+}
 .faster-button:hover{
   border: 3px solid #F52110;
   background-color: black;

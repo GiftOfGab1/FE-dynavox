@@ -32,7 +32,10 @@ export default (state = userInitialState, action) => {
       return {}
     }
     case 'ADD_PHRASE' : {
-      return {}
+      return {
+        ...state,
+        socialSettings: action.socialSettings
+      }
     }
     case 'SET_USER' : {
       return { 

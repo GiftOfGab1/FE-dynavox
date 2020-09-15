@@ -1,7 +1,9 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { connect } from "react-redux"
 import { store } from '../../index'
 import useSubCategoriesPage from './useSubCategoriesPage';
+import Button from '../Button/Button'
 
 
 function SubCategoriesPage(props) {
@@ -12,6 +14,16 @@ function SubCategoriesPage(props) {
 
 
     return (
+        <>
+        <section>
+            <Link
+                key={'Back'}
+                to={'/'}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+            >
+            <Button name={'Back'} />
+            </Link>
+        </section>
         <section
             className='phrase-page-container'
             onClick={(e) => {
@@ -19,6 +31,7 @@ function SubCategoriesPage(props) {
         >
             {relatedPhrases && relatedPhrases}
         </section>
+        </>
     )
 }
 

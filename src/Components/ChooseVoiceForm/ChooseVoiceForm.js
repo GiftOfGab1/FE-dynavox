@@ -28,16 +28,7 @@ function ChooseVoiceForm() {
     };
 
     const updateUserSettings = async () => {
-      // const user = useSelector((state) => state.userDetails)
-      // console.log(user)
       const userResponse = await updateUserPost(voice, voiceSpeed)
-      // const voiceUpdate = userResponse.data.updateUser.user.voice
-      // const speedUpdate = userResponse.data.updateUser.user.speed
-      // console.log(user)
-      // user.voice = voiceUpdate 
-      // user.speed = speedUpdate
-      // event.preventDefault()
-      // return dispatch(setUser(user, setUserDetails))
       return dispatch(setUser(userResponse.data.updateUser.user, setUserDetails))
     }
 
@@ -80,6 +71,18 @@ function ChooseVoiceForm() {
                 <option 
                     name='name'
                     value="Mary">Mary
+                </option>
+                <option 
+                    name='name'
+                    value="Clara">Clara
+                </option>
+                <option
+                    name='name'
+                    value="John">John
+                </option>
+                <option
+                    name='name'
+                    value="Mike">Mike
                 </option>
             </select>
             <section className='voice-setting-container'>

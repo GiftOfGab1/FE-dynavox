@@ -26,8 +26,8 @@ p {
 
 .add-phrase-button {
   cursor: pointer;
-  width: 6em;
-  min-height: 3em;
+   width: 1.3em;
+  /* min-height: 3em;  */
   /* background-color:  white; */
   border: none;
   /* box-shadow: -2px 4px #F39C12; */
@@ -38,11 +38,12 @@ p {
 }
 
 .add-phrase-button {
+margin-bottom: 3px;
 background: #333333;
 border-radius: 10px;
 color: #fdfcfce7;
 cursor: pointer;
-/* font-size: 21px; */
+font-size: 6em;
 outline: none;
 border: solid 3px transparent;
 background-image: linear-gradient(

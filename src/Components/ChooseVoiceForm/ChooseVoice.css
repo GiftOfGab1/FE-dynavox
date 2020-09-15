@@ -103,3 +103,8 @@
 }
 
 
+@media all and (max-width: 470px) and (min-width: 200px) {
+  .choose-voice-form {
+    height: 65%;
+  }
+}

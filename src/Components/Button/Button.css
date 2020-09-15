@@ -2,16 +2,12 @@
 
 
 button {
-    cursor: pointer;
-    width: 5em;
-    min-height: 3em;
-    /* background-color:  white; */
-    border: none;
-    /* box-shadow: -2px 4px #F39C12; */
-    /* box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C; */
-    font-family: 'Comic Neue', cursive;
-    font-size: 1em;
-    /* color: white; */
+  cursor: pointer;
+  width: 5em;
+  min-height: 3em;
+  border: none;
+  font-family: 'Comic Neue', cursive;
+  font-size: 1em;
 }
 
 button {
@@ -19,7 +15,6 @@ button {
   border-radius: 10px;
   color: #fdfcfce7;
   cursor: pointer;
-  /* font-size: 21px; */
   outline: none;
   border: solid 3px transparent;
   background-image: linear-gradient(

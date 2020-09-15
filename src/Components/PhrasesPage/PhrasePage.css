@@ -11,59 +11,41 @@ p {
   font-size: .7em;
 }
 
-
-/* .add-phrase-container{
-  display: flex;
-  justify-content: space-around;
-  font-size: 1.3em;
-  background-image: linear-gradient(
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0)
-  ),linear-gradient(101deg, #f52211, #f49c11);
-} */
-
-
-
 .add-phrase-button {
   cursor: pointer;
   width: 1.3em;
-  /* min-height: 3em;  */
-  /* background-color:  white; */
   border: none;
-  /* box-shadow: -2px 4px #F39C12; */
-  /* box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C; */
   font-family: 'Comic Neue', cursive;
   font-size: 1em;
-  /* color: white; */
 }
 
 .add-phrase-button {
   margin-top: 0.2em;
-margin: 10px;
-background: #333333;
-border-radius: 10px;
-color: #fdfcfce7;
-cursor: pointer;
-font-size: 6em;
-outline: none;
-border: solid 3px transparent;
-background-image: linear-gradient(
-  rgba(255, 255, 255, 0),
-  rgba(255, 255, 255, 0)
-),linear-gradient(101deg, #f52211, #f49c11);
-box-shadow: 4px 7px 13px 0px #000000c2, inset 3px 3px 6px 0px #4c4c4c,
-  inset -4px -4px 4px 0px #292929, 2px 1000px 1px #282d34 inset;
-background-origin: border-box;
-background-clip: content-box, border-box;
+  margin: 10px;
+  background: #333333;
+  border-radius: 10px;
+  color: #fdfcfce7;
+  cursor: pointer;
+  font-size: 6em;
+  outline: none;
+  border: solid 3px transparent;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  ),linear-gradient(101deg, #f52211, #f49c11);
+  box-shadow: 4px 7px 13px 0px #000000c2, inset 3px 3px 6px 0px #4c4c4c,
+    inset -4px -4px 4px 0px #292929, 2px 1000px 1px #282d34 inset;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
 .add-phrase-button:hover {
-color: white;
-box-shadow: inset 4px 7px 13px 0px #000000c2,
-  inset -4px -2px 13px 0px #000000c2, 4px 7px 13px 0px #000000c2;
+  color: white;
+  box-shadow: inset 4px 7px 13px 0px #000000c2,
+    inset -4px -2px 13px 0px #000000c2, 4px 7px 13px 0px #000000c2;
 }
 .add-phrase-button:active {
-color: white;
-box-shadow: inset 4px 7px 13px 0px #000000c2,
-  inset -4px -2px 13px 0px #000000c2, inset 0px 0px 13px 0px #000000c2;
+  color: white;
+  box-shadow: inset 4px 7px 13px 0px #000000c2,
+    inset -4px -2px 13px 0px #000000c2, inset 0px 0px 13px 0px #000000c2;
 }

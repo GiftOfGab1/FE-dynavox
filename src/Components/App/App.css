@@ -55,10 +55,7 @@
   box-shadow: 4px 7px 13px 0px #040404c2, inset 3px 3px 6px 0px #fb760a, inset -4px -4px 4px 0px #94400b, 2px 1000px 1px #D35400 inset;
   background-origin: border-box;
   background-clip: content-box, border-box;
-  /* box-shadow: -5px 10px  #39015C; */
-  /* box-shadow: -1px 1px 5px 0px #39015C, 2px 3px 18px 1px #39015C */
   text-shadow: 1px 2px 2px black;
-  
 }
 
 

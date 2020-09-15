@@ -7,7 +7,6 @@ import MainPage from '../MainPage/MainPage'
 import PhrasePage from '../PhrasesPage/PhrasePage'
 import SubCategoriesPage from '../SubCategoriesPage/SubCategoriesPage'
 import useApp from './useApp'
-import { useSelector } from 'react-redux'
 
 
 function App() {

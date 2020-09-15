@@ -11,7 +11,9 @@ import { startPlay, stopPlay, addPhrases} from '../../Store/Actions';
 import setPhrase from '../../Store/Reducers/index'
 // import Button from '../Button/Button'
 
-function AddPhraseForm (name, id) {
+function AddPhraseForm (props) {
+  const { id, name } = props
+  console.log(props)
   const isPlaying = useSelector((state) => state.AppState.isPlaying)
   const dispatch = useDispatch();
   const User = useSelector(state => state.AppState.userDetails)
@@ -51,7 +53,7 @@ function AddPhraseForm (name, id) {
     {title: "dog", image: "🐶"},
     {title: "rtj", image: "🎹"},
     {title: "school", image: "🎒"},
-    {title: "drink", image: "'🥃"},
+    {title: "drink", image: "🥃"},
     {title: "peace", image: "✌️"},
     {title: "wave", image: "👋"},
     {title: "felicia", image: "👩"},
@@ -83,8 +85,8 @@ function AddPhraseForm (name, id) {
   };
   
   const updatePhrases = async () => {
-    console.log(name.name)
-    const phraseResponse = await postPhrase(phraseInput, imageInput, name.name, id)
+    console.log(id.id)
+    const phraseResponse = await postPhrase(phraseInput, imageInput, name, id)
     return dispatch(addPhrases(phraseResponse, setPhrase))
   }
 

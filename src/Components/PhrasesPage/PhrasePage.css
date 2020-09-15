@@ -4,7 +4,7 @@
   justify-content: space-around;
   align-content: space-around;
   margin-top: 1em;
-  width: 100%;
+  max-width: 100%;
 }
 
 p {
@@ -26,7 +26,7 @@ p {
 
 .add-phrase-button {
   cursor: pointer;
-   width: 1.3em;
+  width: 1.3em;
   /* min-height: 3em;  */
   /* background-color:  white; */
   border: none;
@@ -38,7 +38,8 @@ p {
 }
 
 .add-phrase-button {
-margin-bottom: 3px;
+  margin-top: 0.2em;
+margin: 10px;
 background: #333333;
 border-radius: 10px;
 color: #fdfcfce7;

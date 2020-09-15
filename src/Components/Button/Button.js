@@ -7,7 +7,7 @@ function Button(props) {
     // const { voiceSpeed, setVoiceSpeed, value, name, onClick } = props
     const { value, name, onClick } = props
     return (
-        <div>
+        <div className='button-container'>
             <button  className={props.label}
                 name={name}
                 value={value}

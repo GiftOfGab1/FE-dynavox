@@ -7,13 +7,10 @@ import MainPage from '../MainPage/MainPage'
 import PhrasePage from '../PhrasesPage/PhrasePage'
 import SubCategoriesPage from '../SubCategoriesPage/SubCategoriesPage'
 import useApp from './useApp'
-import { useSelector } from 'react-redux'
 
 
 function App() {
   useApp()
-  const User = useSelector(state => state.AppState.userDetails)
-
 
   return (
     <div className="App">
@@ -33,7 +30,6 @@ function App() {
           render={(routeProps) => {
             const { params } = routeProps.match
             const { name, key } = params
-            console.log(params);
             return (
               <PhrasePage name={name} id={key}/>
             )

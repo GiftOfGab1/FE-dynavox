@@ -1,18 +1,13 @@
 import React from 'react';
-import PhrasePage from '../PhrasesPage/PhrasePage'
 import "../Emoji/Emoji.css"
 import { connect } from "react-redux"
 import { store } from '../../index'
-import { Route } from 'react-router-dom'
 import PropTypes from 'prop-types';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay } from '../../Store/Actions';
 
-
-
 function Emoji (props) {
-  console.log(props)
   
   const dispatch = useDispatch();
   const { phraseName, voice, speed  } = props
@@ -47,12 +42,7 @@ function Emoji (props) {
   }
 
     return (
-      // <Link 
-      // id={name}
-      //   key={name} 
-      //   to={`/subCategories-page/${name}`} 
-      //   style={{ textDecoration: 'none', color: 'inherit' }}
-      // >
+      
         <section className="emoji-background">
           <span
             className={`emoji ${props.img}`}
@@ -64,7 +54,6 @@ function Emoji (props) {
       >
       </span>
     </section>
-    // </Link> 
   )
 };
 Emoji.propTypes = {

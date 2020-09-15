@@ -1,4 +1,4 @@
-describe('ChooseVoiceFrom', () => {
+describe('SubCategory', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/')
     })

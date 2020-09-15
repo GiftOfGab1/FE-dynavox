@@ -1,32 +1,22 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-//This needs to be changed to ChooseVoice once I have access rights to the repo
 import './ChooseVoice.css';
 import { handleTextToSpeech } from '../../Api/getTextToSpeech'
 import { updateUser as updateUserPost } from '../../Api/updateUser'
-
 import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay, setUser } from '../../Store/Actions';
 import setUserDetails from '../../Store/Reducers/index'
-// import Button from '../Button/Button'
-import './ChooseVoice.css';
 
 function ChooseVoiceForm() {
-    //State
 
-    
     const isPlaying = useSelector((state) => state.isPlaying)
     const dispatch = useDispatch();
-
     const [phraseInput, setPhraseInput] = useState('')
     const [voice, setVoice] = useState('default')
     const [voiceSpeed, setVoiceSpeed] = useState(0)
-    // const [playing, setPlay] = useState(false);
-    // const [audioData, setAudioData] = useState({});
 
     const togglePlay = async () => {
       const audio = await handleTextToSpeech(phraseInput, voice, voiceSpeed);
-      // setAudioData(audio);
       if(isPlaying) {
         audio.pause();
         audio.currentTime = 0;
@@ -56,7 +46,7 @@ function ChooseVoiceForm() {
                 <input
                     type='text'
                     name='text-input'
-                    className='voice-selector-input'
+                    className='voice-selector-input text-input'
                     onChange={(e) => {
                         setPhraseInput(e.target.value)
                     }}
@@ -64,7 +54,7 @@ function ChooseVoiceForm() {
                 ></input>
             <label>Choose your voice</label>
             <select
-                className='voice-selector-input'
+                className='voice-selector-input dropdown-input'
                 name='voice-selector'
                 onChange={(e) => {
                     setVoice(e.target.value)
@@ -141,7 +131,7 @@ function ChooseVoiceForm() {
                     }}
                     >Play
                 </button>
-                <Link to="/main-page" style={{ textDecoration: 'none', }}>
+                <Link to="/" style={{ textDecoration: 'none', }}>
                     <button
                         className="save-and-play-buttons"
                         value='save'

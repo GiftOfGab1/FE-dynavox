@@ -7,19 +7,16 @@ import { Link } from 'react-router-dom'
 import AddPhraseForm from '../AddPhraseForm/AddPhrase'
 
 
+
 function PhrasePage(props) {
 
     const { name, id } = props
     const { socialSettings } = props.AppState
     const relatedPhrases = usePhrasePage(id, name, socialSettings)
-    console.log(relatedPhrases);
     
     return (
         <section 
         className='phrase-page-container'
-        onClick={(e) => {
-            console.log(e.target);
-        }}
         >   
         {relatedPhrases}
           <section className='add-phrase-container'>

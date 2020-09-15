@@ -16,46 +16,40 @@
   font-size: 3em;
 }
 .navigation {
-    width: 100%;
+  width: 100%;
 }
+.addPhrase {
+  content: "➕"
+}
+
 p {
   font-size: .7em;
 }
 .button-container {
-    display: flex;
-    justify-content: space-around;
-    font-size: 1.3em;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.3em;
 }
 
 .button-container button{
-    background-image: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),linear-gradient(101deg, #f52211, #f49c11);
-    /* color: white; */
-    /* box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white; */
-
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  ),linear-gradient(101deg, #f52211, #f49c11);
 } 
-/* .button-container button:hover{
-    background-color: #F52110;
-    color: white;
-    box-shadow: -1px 1px 5px 0px white, 2px 3px 18px 1px white;
 
-} */
-
-/* .header {
-    display:block;
-    width: 100%;
-} */
-
-
-@media all and (max-width: 550px) and (min-width: 402px) {
+@media all and (max-width: 600px) and (min-width: 530px) {
+  .button-container {
+    font-size: 1.2em;
+  }
+}
+@media all and (max-width: 530px) and (min-width: 350px) {
   .button-container {
     font-size: 1em;
   }
 }
 
-@media all and (max-width: 402px) and (min-width: 250px) {
+@media all and (max-width: 350px) and (min-width: 250px) {
   .button-container {
     font-size: 0.85em;
   }

@@ -3,6 +3,7 @@ import './App.css'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
+import AddPhraseForm from '../AddPhraseForm/AddPhrase'
 import MainPage from '../MainPage/MainPage'
 import PhrasePage from '../PhrasesPage/PhrasePage'
 import SubCategoriesPage from '../SubCategoriesPage/SubCategoriesPage'
@@ -26,10 +27,21 @@ function App() {
             }}
         />
         <Route
+          path={'/addPhrase/:key/:name'}
+          render={(routeProps) => {
+            const { params } = routeProps.match
+            const { name, key } = params
+            return (
+              <AddPhraseForm name={name} id={key}/>
+            )
+          }}
+        />
+        <Route
           path={'/phrase-page/:name/:key'}
           render={(routeProps) => {
             const { params } = routeProps.match
             const { name, key } = params
+            // console.log(params);
             return (
               <PhrasePage name={name} id={key}/>
             )
@@ -37,7 +49,6 @@ function App() {
         />
         <Route
           path={'/subCategories-page/:name'} 
-
           render={(routeProps) => {
             const { params } = routeProps.match
             const { name } = params

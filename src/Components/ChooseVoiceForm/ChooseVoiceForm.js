@@ -9,7 +9,8 @@ import setUserDetails from '../../Store/Reducers/index'
 
 function ChooseVoiceForm() {
 
-    const isPlaying = useSelector((state) => state.isPlaying)
+    
+    const isPlaying = useSelector((state) => state.AppState.isPlaying)
     const dispatch = useDispatch();
     const [phraseInput, setPhraseInput] = useState('')
     const [voice, setVoice] = useState('default')

@@ -3,6 +3,8 @@ import { connect } from "react-redux"
 import { store } from '../../index'
 import './PhrasePage.css';
 import usePhrasePage from './usePhrasePage';
+import { Link } from 'react-router-dom'
+// import AddPhraseForm from '../AddPhraseForm/AddPhrase'
 
 
 
@@ -17,6 +19,19 @@ function PhrasePage(props) {
         className='phrase-page-container'
         >   
         {relatedPhrases}
+          <section className='add-phrase-container'>
+            <section className='add-phrase-button'>
+              <Link
+                  key={name}
+                  id={'id'}
+                  to={`/addPhrase/${name}/${id}`}
+                  style={{ textDecoration: 'none', color: 'inherit' }}
+              ><section><span role='img' aria-label='add a phrase'>➕</span></section>
+                  {/* <AddPhraseForm  name={name}  id={id}  /> */}
+              </Link>
+            </section>
+            <p>Add Phrase</p>
+          </section>
         </section>
     )
 }

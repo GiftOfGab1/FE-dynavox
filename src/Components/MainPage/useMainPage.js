@@ -31,7 +31,7 @@ function useMainPage(socialSettings) {
                         to={`/subCategories-page/${response.title}`}
                         style={{ textDecoration: 'none', color: 'inherit' }}
                     >
-                        <SubCategory categoryName={response.title} routeTo={'subCategories-Page'}/>
+                        <SubCategory categoryName={response.title} image={response.icon} routeTo={'subCategories-Page'}/>
                     </Link>
         })
         return subCategories

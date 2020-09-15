@@ -1,11 +1,11 @@
-export const getSocialSetting = socialSetting => ({
-    type: 'GET_SOCIAL_SETTING',
-    socialSetting
+export const setSocialSettings = socialSettings => ({
+    type: 'SET_SOCIAL_SETTINGS',
+    socialSettings
 });
 
-export const addSocialSetting = socialSetting => ({
+export const addSocialSetting = socialSettings => ({
   type: 'ADD_SOCIAL_SETTING',
-  socialSetting
+  socialSettings
 })
 
 export const getSubCategories = subCategories => ({
@@ -41,7 +41,7 @@ export const setUser = userDetails => ({
   userDetails
 })
 
-export const updateUser = userDetails => ({
+export const updateUser = (userDetails) => ({
   type: 'UPDATE_USER',
   userDetails
 })

@@ -1,32 +1,18 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './App.css'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
-import MainPage from '../MainPage/MainPage.js'
-import PhrasesPage from '../PhrasesPage/PhrasePage.js'
-import { getUserInfo } from '../../Api/getTextToSpeech'
-import setUserDetails from '../../Store/Reducers/index'
-import { useDispatch } from "react-redux";
-import { setUser } from '../../Store/Actions/index'
-
+import MainPage from '../MainPage/MainPage'
+import PhrasePage from '../PhrasesPage/PhrasePage'
+import SubCategoriesPage from '../SubCategoriesPage/SubCategoriesPage'
+import useApp from './useApp'
+import { useSelector } from 'react-redux'
 
 
 function App() {
-
-  const dispatch = useDispatch();
-  const useMountEffect = (fun) => useEffect(fun, [])
-
-  
-  const getUser = async () => {
-    const user = await getUserInfo()    
-    return dispatch(setUser(user.data.user, setUserDetails))
-  }
-
-  useEffect(() => {
-    getUser()
-    
-  })
+  useApp()
+  const User = useSelector(state => state.AppState.userDetails)
 
 
   return (
@@ -35,7 +21,7 @@ function App() {
       <Navigation />
       <Switch>
         <Route
-          path='/choose-voice'
+          exact path='/choose-voice'
           render={() => {
             return (
               <ChooseVoiceForm />
@@ -43,24 +29,39 @@ function App() {
             }}
         />
         <Route
-          path='/phrases-page'
-          render={() => {
+          path={'/phrase-page/:name/:key'}
+          render={(routeProps) => {
+            const { params } = routeProps.match
+            const { name, key } = params
+            console.log(params);
             return (
-              <PhrasesPage /> 
-              )
-            }}
-        />
-        <Route
-          path='/'
-          render={() => {
-            return (
-              <MainPage />
+              <PhrasePage name={name} id={key}/>
             )
           }}
         />
+        <Route
+          path={'/subCategories-page/:name'} 
+
+          render={(routeProps) => {
+            const { params } = routeProps.match
+            const { name } = params
+            return (
+              <SubCategoriesPage name={name} /> 
+              )
+            }}
+        />
       </Switch>
+      <Route
+        exact path='/'
+        render={() => {
+          return (
+            <MainPage />
+          )
+        }}
+      />
     </div>
   );
 }
+
 
 export default withRouter(App);

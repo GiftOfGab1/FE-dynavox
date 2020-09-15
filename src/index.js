@@ -12,6 +12,7 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 // App imports
 import './index.css'
 import AppState from './Store/Reducers/index'
+
 // import rootReducer  from './Store/Reducers/index'
 const appReducer = combineReducers({
   AppState,
@@ -22,7 +23,7 @@ export const rootReducer = (state, action) => {
   return appReducer(state, action)
 }
 
-const store = createStore(
+export const store = createStore(
   rootReducer,
   composeWithDevTools()
   // other store enhancers if any

@@ -1,18 +1,27 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import SubCategory from '../SubCategory/subCategory'
 import './MainPage.css';
+import useMainPage from './useMainPage'
+import { connect } from "react-redux"
+import { store } from '../../index'
+import PropTypes from 'prop-types';
 
+function MainPage(props) {  
 
-function MainPage() {
-return (
-    <section className='main-page-container'>
-        <Link to="/phrases-page" style={{ textDecoration: 'none', color: 'inherit' }}>
-            <SubCategory categoryName={'Bank'}/>
-        </Link>
-            <SubCategory categoryName={'Grocery Store'}/>
-    </section>
-)
+    const { socialSettings } = props.AppState
+    const subCategories = useMainPage(socialSettings)  
+    return (
+        <section className='main-page-container'>
+                {subCategories}
+        </section>
+    ) 
+}
+const mapStateToProps = () => {
+    return store.getState()
 }
 
-export default MainPage
+MainPage.propTypes = {
+  AppState: PropTypes.object.isRequired
+}
+
+export default connect(mapStateToProps)(MainPage);
+

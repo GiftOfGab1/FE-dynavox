@@ -3,7 +3,7 @@ describe('Phrase', () => {
         cy.visit('http://localhost:3000/')
     })
 
-    it('should be true', () => {
+    it('it should render a phrase', () => {
         cy.get('.sub-category-container').contains('Bank').click()
         cy.get('.sub-category-container').contains('Greetings').click()
         cy.get('.phrase-container').contains('Hello').should('be.visible')

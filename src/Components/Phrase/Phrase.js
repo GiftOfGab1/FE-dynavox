@@ -2,13 +2,11 @@ import React from 'react'
 import './Phrase.css';
 import Emoji from '../Emoji/Emoji'
 import PropTypes from 'prop-types';
-// import { handleTextToSpeech } from '../../Api/getTextToSpeech'
-// import { useDispatch, useSelector } from "react-redux";
-// import { startPlay, stopPlay } from '../../Store/Actions';
-
+import { useSelector } from 'react-redux'
 
 
 function Phrase(props) {
+
   const { expression } = props.categoryName
   const User = useSelector(state => state.AppState.userDetails)
 

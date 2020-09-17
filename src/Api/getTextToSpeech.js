@@ -3,9 +3,11 @@ const LANGUAGE = "en-us";
 
 
 export const getVoiceData = async (textToSpeech, voice, rate) => {
+  const removeQuestion = textToSpeech.replace(/\?/g,'')
 	try {
-		const response = await fetch(`https://api.voicerss.org/?key=${API_KEY}&hl=${LANGUAGE}&v=${voice}&r=${rate}&src=${textToSpeech}`);
-    //const response = await fetch(`https://flask-microservice-speech.herokuapp.com/speech/${textToSpeech}/${rate}/${voice}`);
+
+		//const response = await fetch(`https://api.voicerss.org/?key=${API_KEY}&hl=${LANGUAGE}&v=${voice}&r=${rate}&src=${textToSpeech}`);
+    const response = await fetch(`https://flask-microservice-speech.herokuapp.com/speech/${removeQuestion}/${rate}/${voice}`);
     const blob = response.blob();
 		return blob;
 	} catch (error) {

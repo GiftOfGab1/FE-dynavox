@@ -19,6 +19,11 @@ To install Gift of Gab
 - cd into your cloned repository and run npm install 
 - Run npm start and Gift of Gab will open in your browseer
 
+![saveVoice](https://user-images.githubusercontent.com/45408452/93404936-d26e5000-f848-11ea-8019-d911fbaa7266.gif)
+![optionsForm](https://user-images.githubusercontent.com/45408452/93404975-f467d280-f848-11ea-8a5a-66b1c700d455.gif)
+![addPhrasePage](https://user-images.githubusercontent.com/45408452/93405002-047fb200-f849-11ea-818d-069f81090c2d.gif)
+![addPhrase2](https://user-images.githubusercontent.com/45408452/93404911-c1254380-f848-11ea-8e52-7db37e34812e.gif)
+
 ## Contributors:
 - Jeremiah Black 
 - Justin Volk

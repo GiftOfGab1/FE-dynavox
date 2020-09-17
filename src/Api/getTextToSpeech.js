@@ -1,5 +1,5 @@
-const API_KEY = "87c7d481c1364b9bb819edffd7d900dc";
-const LANGUAGE = "en-us";
+// const API_KEY = "87c7d481c1364b9bb819edffd7d900dc";
+// const LANGUAGE = "en-us";
 
 
 export const getVoiceData = async (textToSpeech, voice, rate) => {

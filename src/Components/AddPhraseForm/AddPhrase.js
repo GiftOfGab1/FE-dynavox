@@ -11,7 +11,6 @@ import setPhrase from '../../Store/Reducers/index'
 
 function AddPhraseForm (props) {
   const { id, name } = props
-  console.log(props)
   const isPlaying = useSelector((state) => state.AppState.isPlaying)
   const dispatch = useDispatch();
   const User = useSelector(state => state.AppState.userDetails)
@@ -83,7 +82,6 @@ function AddPhraseForm (props) {
   };
   
   const updatePhrases = async () => {
-    console.log(id.id)
     const phraseResponse = await postPhrase(phraseInput, imageInput, name, id)
     return dispatch(addPhrases(phraseResponse, setPhrase))
   }
@@ -129,7 +127,7 @@ function AddPhraseForm (props) {
                   }}
                   >Play
               </button>
-              <Link to="/main-page" style={{ textDecoration: 'none', }}>
+              <Link to="/" style={{ textDecoration: 'none', }}>
                   <button
                       className="save-and-play-buttons"
                       value='save'

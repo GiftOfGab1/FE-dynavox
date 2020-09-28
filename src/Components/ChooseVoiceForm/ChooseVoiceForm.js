@@ -130,7 +130,7 @@ function ChooseVoiceForm() {
                 </button>
                 <Link 
                     to="/" 
-                    style={{ textDecoration: 'none', border: 'solid 1px yellow' }}
+                    style={{ textDecoration: 'none' }}
                     onClick={e => {
                         setPhraseInput('')
                         setVoice('default')

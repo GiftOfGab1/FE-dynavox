@@ -87,9 +87,7 @@ function AddPhraseForm (props) {
   }
 
   const handleFormSubmit = async formSubmitEvent => {
-    formSubmitEvent.preventDefault();
     await updatePhrases()
-
   };
 
   return (
@@ -127,20 +125,21 @@ function AddPhraseForm (props) {
                   }}
                   >Play
               </button>
-              <Link to="/" style={{ textDecoration: 'none', }}>
+              <Link 
+                to="/" 
+                style={{ textDecoration: 'none' }}
+                onClick={e => {
+                  handleFormSubmit(e)
+                  setPhraseInput('')
+                  setImageInput()
+                }
+              }
+              >
                   <button
                       className="save-and-play-buttons"
                       value='save'
                       name='save-button'
                       label={'Save'}
-                      onClick={ e => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        handleFormSubmit(e)
-                        setPhraseInput('')
-                        setImageInput()
-                      }
-                    }
                   >
                     Save
                   </button>

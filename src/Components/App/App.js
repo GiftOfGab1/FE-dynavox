@@ -3,11 +3,13 @@ import './App.css'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
+import AddSubcategoryForm from '../AddSubcategoryForm/AddSubcategoryForm'
 import AddPhraseForm from '../AddPhraseForm/AddPhrase'
 import MainPage from '../MainPage/MainPage'
 import PhrasePage from '../PhrasesPage/PhrasePage'
 import SubCategoriesPage from '../SubCategoriesPage/SubCategoriesPage'
 import useApp from './useApp'
+// import { addSubCategory } from '../../Store/Actions'
 
 
 function App() {
@@ -18,6 +20,14 @@ function App() {
       <h1 className='header'>Gift of Gab</h1>
       <Navigation />
       <Switch>
+        <Route
+          path="/addSubcategoryForm"
+          render={() => {
+            return (
+            <AddSubcategoryForm />
+              )
+          }}
+       />
         <Route
           exact path='/choose-voice'
           render={() => {

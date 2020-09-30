@@ -31,6 +31,18 @@ function SubCategoriesPage(props) {
         >
           {relatedPhrases && relatedPhrases}
         </section>
+        <section className='add-phrase-container'>
+          <section className='add-phrase-button'>
+            <Link
+              key={name}
+              id={'id'}
+              to={`/addSubcategoryForm`}
+              style={{ textDecoration: 'none', color: 'inherit' }}
+            ><section><span role='img' aria-label='add a phrase'>➕</span></section>
+            </Link>
+          </section>
+          <p>Add Phrase</p>
+        </section>
       </>
     )
 }

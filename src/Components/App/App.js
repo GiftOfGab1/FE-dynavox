@@ -21,7 +21,7 @@ function App() {
       <Navigation />
       <Switch>
         <Route
-          path="/addSubcategoryForm"
+          path="/AddSubcategoryForm"
           render={() => {
             return (
             <AddSubcategoryForm />

@@ -11,8 +11,6 @@ function SubCategoriesPage(props) {
     const { socialSettings } = props.AppState
     const relatedPhrases = useSubCategoriesPage(name, socialSettings)
     
-
-
     return (
       <>
         <section className='sub-category-page-container'>
@@ -36,12 +34,12 @@ function SubCategoriesPage(props) {
             <Link
               key={name}
               id={'id'}
-              to={`/addSubcategoryForm`}
+              to={`/addSubcategoryForm/${name}`}
               style={{ textDecoration: 'none', color: 'inherit' }}
             ><section><span role='img' aria-label='add a phrase'>➕</span></section>
             </Link>
           </section>
-          <p>Add Phrase</p>
+          <p>Add A Subcategory</p>
         </section>
       </>
     )

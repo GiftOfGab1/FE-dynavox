@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import { store } from '../../index'
 import useSubCategoriesPage from './useSubCategoriesPage';
 import Button from '../Button/Button'
+import '../PhrasesPage/PhrasePage.css'
 
 
 function SubCategoriesPage(props) {

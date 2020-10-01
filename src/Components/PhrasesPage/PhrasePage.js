@@ -15,7 +15,7 @@ function PhrasePage(props) {
   
   return (
     <section 
-      className='back-button-container'
+      className='phrase-page-container'
     >   
       <section className='sub-category-page-container'>
       <Link

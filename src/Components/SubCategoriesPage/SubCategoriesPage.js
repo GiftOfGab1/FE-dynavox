@@ -39,7 +39,7 @@ function SubCategoriesPage(props) {
             </Link>
           </section>
           <p>Add A Subcategory</p>
-          </section>
+              </section>
         </section>
       </>
     )

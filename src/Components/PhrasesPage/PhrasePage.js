@@ -20,7 +20,7 @@ function PhrasePage(props) {
       <section className='sub-category-page-container'>
       <Link
         key={'Back'}
-        to={'/'}
+        to={`/subCategories-page/${name}`}
         style={{ textDecoration: 'none', color: 'inherit' }}
       >
         <Button name={'Back'} />

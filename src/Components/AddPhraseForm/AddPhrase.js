@@ -10,6 +10,7 @@ import setPhrase from '../../Store/Reducers/index'
 
 
 function AddPhraseForm (props) {
+  console.log('addPhrase Props:', props);
   const { id, name } = props
   const isPlaying = useSelector((state) => state.AppState.isPlaying)
   const dispatch = useDispatch();

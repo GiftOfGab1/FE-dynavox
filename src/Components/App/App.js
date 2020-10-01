@@ -9,7 +9,6 @@ import MainPage from '../MainPage/MainPage'
 import PhrasePage from '../PhrasesPage/PhrasePage'
 import SubCategoriesPage from '../SubCategoriesPage/SubCategoriesPage'
 import useApp from './useApp'
-// import { addSubCategory } from '../../Store/Actions'
 
 
 function App() {
@@ -21,10 +20,12 @@ function App() {
       <Navigation />
       <Switch>
         <Route
-          path="/AddSubcategoryForm"
-          render={() => {
+          path="/AddSubcategoryForm/:name"
+          render={(routeProps) => {
+            const { params } = routeProps.match
+            const { name } = params
             return (
-            <AddSubcategoryForm />
+            <AddSubcategoryForm id={ name }/>
               )
           }}
        />

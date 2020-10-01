@@ -6,8 +6,6 @@ import setPhrase from '../../Store/Reducers/index'
 import { addPhrases } from '../../Store/Actions';
 import { useDispatch } from "react-redux";
 
-
-
 function AddSubcategoryForm(props) {
     const { id }  =  props
     const dispatch = useDispatch();

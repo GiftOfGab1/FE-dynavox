@@ -3,6 +3,7 @@ import './App.css'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
+import AddSubcategoryForm from '../AddSubcategoryForm/AddSubcategoryForm'
 import AddPhraseForm from '../AddPhraseForm/AddPhrase'
 import MainPage from '../MainPage/MainPage'
 import PhrasePage from '../PhrasesPage/PhrasePage'
@@ -18,6 +19,16 @@ function App() {
       <h1 className='header'>Gift of Gab</h1>
       <Navigation />
       <Switch>
+        <Route
+          path="/AddSubcategoryForm/:name"
+          render={(routeProps) => {
+            const { params } = routeProps.match
+            const { name } = params
+            return (
+            <AddSubcategoryForm id={ name }/>
+              )
+          }}
+       />
         <Route
           exact path='/choose-voice'
           render={() => {

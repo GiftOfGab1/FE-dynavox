@@ -99,8 +99,6 @@ function ChooseVoiceForm() {
                         e.target.name === 'increase-button' && voiceSpeed < 5 && setVoiceSpeed(voiceSpeed + parseInt(e.target.value))
                         e.target.name === 'decrease-button' && voiceSpeed > -5 && setVoiceSpeed(voiceSpeed - parseInt(e.target.value))
                     }}
-                    voiceSpeed={voiceSpeed}
-                    setVoiceSpeed={setVoiceSpeed}
                     > +
                 </button>
                 <h5 className='voice-setting'>{voiceSpeed}</h5>
@@ -114,8 +112,6 @@ function ChooseVoiceForm() {
                         e.target.name === 'increase-button' && voiceSpeed < 5 && setVoiceSpeed(voiceSpeed + parseInt(e.target.value))
                         e.target.name === 'decrease-button' && voiceSpeed > -5 && setVoiceSpeed(voiceSpeed - parseInt(e.target.value))
                     }}
-                    voiceSpeed={voiceSpeed}
-                    setVoiceSpeed={setVoiceSpeed}
                     > -
                 </button>
             </section>
@@ -132,21 +128,21 @@ function ChooseVoiceForm() {
                     }}
                     >Play
                 </button>
-                <Link to="/" style={{ textDecoration: 'none', }}>
+                <Link 
+                    to="/" 
+                    style={{ textDecoration: 'none' }}
+                    onClick={e => {
+                        setPhraseInput('')
+                        setVoice('default')
+                        setVoiceSpeed(0)
+                        updateUserSettings()
+                    }
+                    }>
                     <button
                         className="save-and-play-buttons"
                         value='save'
                         name='save-button'
                         label={'Save'}
-                        onClick={ e => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            setPhraseInput('')
-                            setVoice('default')
-                            setVoiceSpeed(0)
-                            updateUserSettings()
-                        }
-                        }
                     >
                       Save
                     </button>

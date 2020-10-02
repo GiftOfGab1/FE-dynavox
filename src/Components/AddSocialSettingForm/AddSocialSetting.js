@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { postSocialSetting } from '../../Api/addSocialSetting'
 import setNewSocialSetting from '../../Store/Reducers/index'
 import { addSocialSetting } from '../../Store/Actions';
 import { useDispatch } from "react-redux";

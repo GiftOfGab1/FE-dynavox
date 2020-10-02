@@ -5,7 +5,6 @@ import { connect } from "react-redux"
 import { store } from '../../index'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import { useDispatch } from "react-redux";
 
 
 

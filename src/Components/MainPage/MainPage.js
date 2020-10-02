@@ -15,6 +15,7 @@ function MainPage(props) {
 
     return (
         <section className='main-page-container'>
+            <section className='social-setting-container'>
                 {subCategories}
             <section className='add-phrase-container'>
                 <section className='add-phrase-button'>
@@ -27,6 +28,7 @@ function MainPage(props) {
                     </Link>
                 </section>
                 <p>Add A Subcategory</p>
+            </section>
             </section>
         </section>
     ) 

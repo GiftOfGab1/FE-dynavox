@@ -22,7 +22,7 @@ export default (state = userInitialState, action) => {
     case 'ADD_SOCIAL_SETTING' : {
       return {
         ...state,
-        socialSettings: action.socialSettings
+        socialSettings: action.addSocialSettings
       }
     }
     case 'GET_SUBCATEGORIES' : {

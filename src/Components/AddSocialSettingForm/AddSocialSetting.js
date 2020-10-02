@@ -15,7 +15,6 @@ function AddSocialSettingForm() {
 
     const updateSocialSettings = async () => {
         const socialSettingResponse = await postNewSocialSetting(socialSettingInput, socialSettingImageInput)
-        console.log(socialSettingResponse);
         return dispatch(addSocialSetting(socialSettingResponse, setNewSocialSetting))
     }
 

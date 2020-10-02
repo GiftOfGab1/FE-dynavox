@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-// import UseAddSubcategoryForm from './UseAddSubcategoryForm'
 import GetIcons from '../Icons/GetIcons'
 import { postPhrase } from '../../Api/postPhrase'
 import setPhrase from '../../Store/Reducers/index'
@@ -14,14 +13,10 @@ function AddSubcategoryForm(props) {
     const [subcatImageInput, setSubcatImageInput] = useState('')
     const [phraseInput, setPhraseInput] = useState('')
     const [imageInput, setImageInput] = useState('')
-    console.log(subcatImageInput);
-
-
     const subCategoryImages = GetIcons()
 
     const updatePhrases = async () => {
-        // console.log('subcat :', subcatTitleInput);
-        const phraseResponse = await postPhrase(phraseInput, imageInput, subcatTitleInput, id)
+        const phraseResponse = await postPhrase(phraseInput, imageInput, subcatImageInput, id)
         return dispatch(addPhrases(phraseResponse, setPhrase))
     }
 

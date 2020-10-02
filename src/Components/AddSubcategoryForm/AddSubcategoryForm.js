@@ -14,7 +14,7 @@ function AddSubcategoryForm(props) {
     const [subcatImageInput, setSubcatImageInput] = useState('')
     const [phraseInput, setPhraseInput] = useState('')
     const [imageInput, setImageInput] = useState('')
-    // const handleSubmit = (e, phraseInput, imageInput, subcatTitleInput, id) => UseAddSubcategoryForm(e, phraseInput, imageInput, subcatTitleInput, id)
+    console.log(subcatImageInput);
 
 
     const subCategoryImages = GetIcons()

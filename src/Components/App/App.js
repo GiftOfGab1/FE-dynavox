@@ -5,6 +5,7 @@ import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
 import AddSubcategoryForm from '../AddSubcategoryForm/AddSubcategoryForm'
 import AddPhraseForm from '../AddPhraseForm/AddPhrase'
+import AddSocialSettingForm from '../AddSocialSettingForm/AddSocialSetting'
 import MainPage from '../MainPage/MainPage'
 import PhrasePage from '../PhrasesPage/PhrasePage'
 import SubCategoriesPage from '../SubCategoriesPage/SubCategoriesPage'
@@ -19,6 +20,16 @@ function App() {
       <h1 className='header'>Gift of Gab</h1>
       <Navigation />
       <Switch>
+        <Route
+          path="/AddSocialSetting/"
+          render={() => {
+            // const { params } = routeProps.match
+            // const { name } = params
+            return (
+            <AddSocialSettingForm />
+              )
+          }}
+       />
         <Route
           path="/AddSubcategoryForm/:name"
           render={(routeProps) => {

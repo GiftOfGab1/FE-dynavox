@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { startPlay, stopPlay } from '../../Store/Actions';
 
 function Emoji (props) {
-  
+  console.log(props.image);
   const dispatch = useDispatch();
   const { phraseName, voice, speed  } = props
   const isPlaying = useSelector((state) => state.isPlaying)
@@ -43,15 +43,14 @@ function Emoji (props) {
 
     return (
       
-        <section className="emoji-background">
-          <span
-            className={`emoji ${props.image}`}
-            role="img"
-            aria-label={props.label ? props.label : ""}
-            aria-hidden={props.label ? "false" : "true"}
-            onClick={handleClick}
-
-      >
+    <section className="emoji-background">
+      <span
+        className={props.image ? `emoji ${props.image}` : 'emoji Common' }
+        role="img"
+        aria-label={props.label ? props.label : ''}
+        aria-hidden={props.label ? "false" : "true"}
+        onClick={handleClick}
+        >
       </span>
     </section>
   )

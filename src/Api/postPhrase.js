@@ -4,7 +4,6 @@ export const postPhrase = async (expression, image, tags, section ) => {
 
   const { socialSettings } = store.getState().AppState
   const sectionId = socialSettings.find(socialSetting => socialSetting.title === section)
-  console.log(sectionId.id);
   try {
       const response = await fetch('https://gift-of-gab.herokuapp.com/v1/graphql', {
           method: 'POST',

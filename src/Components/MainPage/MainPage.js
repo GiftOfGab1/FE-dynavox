@@ -26,7 +26,7 @@ function MainPage(props) {
                     ><section><span role='img' aria-label='add a phrase'>➕</span></section>
                     </Link>
                 </section>
-                <p>Add A Subcategory</p>
+                <p>Add A Social Setting</p>
             </section>
             </section>
         </section>

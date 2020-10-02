@@ -82,10 +82,8 @@ function AddPhraseForm (props) {
   };
   
   const updatePhrases = async () => {
-    console.log(name);
-    console.log(id);
-    // const phraseResponse = await postPhrase(phraseInput, imageInput, name, id)
-    // return dispatch(addPhrases(phraseResponse, setPhrase))
+    const phraseResponse = await postPhrase(phraseInput, imageInput, name, id)
+    return dispatch(addPhrases(phraseResponse, setPhrase))
   }
 
   const handleFormSubmit = async formSubmitEvent => {

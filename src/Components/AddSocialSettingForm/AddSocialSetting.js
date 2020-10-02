@@ -31,7 +31,7 @@ function AddSocialSettingForm() {
                 //     // handleFormSubmit(e)
                 }}
             >
-                <h1>Add Subcategory</h1>
+                <h1>Add Social Setting</h1>
                 <label>New Social Setting </label>
                 <input
                     type='text'

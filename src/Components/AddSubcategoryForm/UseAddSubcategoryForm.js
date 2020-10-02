@@ -9,6 +9,7 @@ import { useDispatch } from "react-redux";
 
 
 function UseAddSubcategoryForm(e, phraseInput, imageInput, subcatTitleInput, id) {
+    console.log('id', id);
     const dispatch = useDispatch();
     // const [subcatTitleInput, setSubcatTitleInput] = useState('')
     // const [subcatImageInput, setSubcatImageInput] = useState('')

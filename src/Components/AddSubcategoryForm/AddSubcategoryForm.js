@@ -15,12 +15,12 @@ function AddSubcategoryForm(props) {
     const [phraseInput, setPhraseInput] = useState('')
     const [imageInput, setImageInput] = useState('')
     // const handleSubmit = (e, phraseInput, imageInput, subcatTitleInput, id) => UseAddSubcategoryForm(e, phraseInput, imageInput, subcatTitleInput, id)
-    console.log(subcatImageInput);
 
 
     const subCategoryImages = GetIcons()
 
     const updatePhrases = async () => {
+        // console.log('subcat :', subcatTitleInput);
         const phraseResponse = await postPhrase(phraseInput, imageInput, subcatTitleInput, id)
         return dispatch(addPhrases(phraseResponse, setPhrase))
     }
@@ -36,7 +36,7 @@ function AddSubcategoryForm(props) {
                 className='add-phrase-form'
                 onSubmit={(e) => {
                 e.stopPropagation()
-                // handleFormSubmit(e)
+                handleFormSubmit(e)
             }}
             >
                 <h1>Add Subcategory</h1>

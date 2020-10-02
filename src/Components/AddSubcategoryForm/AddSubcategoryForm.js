@@ -32,6 +32,7 @@ function AddSubcategoryForm(props) {
     
     return (
         <>
+                <h1>Add Subcategory</h1>
             <form 
                 className='add-phrase-form'
                 onSubmit={(e) => {
@@ -39,7 +40,6 @@ function AddSubcategoryForm(props) {
                 handleFormSubmit(e)
             }}
             >
-                <h1>Add Subcategory</h1>
                     <label>Category Name </label>
                     <input
                         type='text'
@@ -59,7 +59,6 @@ function AddSubcategoryForm(props) {
                     <option value="">--Please Choose an Icon--</option>
                     {subCategoryImages}
                 </select>
-                <section className='play-save-container'>
                     <label>Phrase</label>
                     <input
                         type='text'
@@ -94,7 +93,6 @@ function AddSubcategoryForm(props) {
                         >Save
                         </button>
                     </Link>
-                </section>
             </form>
         </>
   )

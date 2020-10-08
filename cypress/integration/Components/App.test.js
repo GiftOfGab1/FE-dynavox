@@ -87,4 +87,17 @@ describe('App', () => {
 
     cy.url().should('eq', 'http://localhost:3000/')
   })
+
+  it('should redirect to the create social setting form', function() {
+    cy.get('.add-phrase-button').click()
+
+    cy.url().should('eq','http://localhost:3000/addSocialSetting')
+
+    cy.get('.phrase-input:eq(0)').type('Grocery Store')
+    cy.get('#icon-select').select('👋hello')
+    cy.contains('Save').click()
+
+    cy.url().should('eq', 'http://localhost:3000/')
+
+  })
 })

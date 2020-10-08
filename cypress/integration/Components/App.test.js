@@ -1,7 +1,7 @@
 describe('App', () => {
   
   beforeEach(() => {
-    cy.visit('http://localhost:3000/')
+    cy.visit('/')
   })
 
   it('should render the nav bar', () => {
@@ -9,7 +9,7 @@ describe('App', () => {
   })
 
   it('should render the header', () => {
-    cy.get('.header').contains('Gift of Gab').should('be.visible')
+    cy.contains('Gift of Gab').should('be.visible')
   })
 
   it('should render the main page', () => {
@@ -20,7 +20,7 @@ describe('App', () => {
   it('should change the route when the Options button is clicked', () => {
     
     cy.get('.navigation').within(() => {
-      cy.get('p').contains('Options').click()
+      cy.contains('Options').click()
     })
 
     cy.location().should((location) => {
@@ -37,10 +37,12 @@ describe('App', () => {
     cy.get('.choose-voice-form').within(() => {
       cy.get('.text-input').type('Howdy')
       cy.get('.dropdown-input').select('Amy')
-      cy.get('button').contains('+').click()
-      cy.get('button').contains('+').click()
-      cy.get('button').contains('-').click()
-      cy.log(cy.get('button').contains('Play'))
+      cy.contains('+').click()
+      cy.contains('+').click()
+      cy.contains('-').click()
+      cy.get('input, [value=Howdy]').should('be.visible')
+      cy.contains('Amy').should('be.visible')
+      cy.contains('1').should('be.visible')
 
     })
   })
@@ -83,8 +85,6 @@ describe('App', () => {
       cy.get('p').contains('Home').click()
     })
 
-    cy.location().should((location) => {
-      expect(location.pathname).to.eq('/')
-    })
+    cy.url().should('eq', 'http://localhost:3000/')
   })
 })

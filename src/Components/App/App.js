@@ -3,6 +3,7 @@ import './App.css'
 import { Switch, Route, withRouter } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import ChooseVoiceForm from '../ChooseVoiceForm/ChooseVoiceForm'
+import UserLoginPage from '../userLogin/userLogin'
 import AddSubcategoryForm from '../AddSubcategoryForm/AddSubcategoryForm'
 import AddPhraseForm from '../AddPhraseForm/AddPhrase'
 import AddSocialSettingForm from '../AddSocialSettingForm/AddSocialSetting'
@@ -20,11 +21,15 @@ function App() {
       <h1 className='header'>Gift of Gab</h1>
       <Navigation />
       <Switch>
+        <Route 
+          path="/LoginPage"
+          render={() => {
+            return <UserLoginPage />
+          }}
+        />
         <Route
           path="/AddSocialSetting/"
           render={() => {
-            // const { params } = routeProps.match
-            // const { name } = params
             return (
             <AddSocialSettingForm />
               )
